@@ -1,0 +1,88 @@
+{
+  "nav": {
+    "home": "Home",
+    "blog": "Blog"
+  },
+  "footer": {
+    "privacy": "Privacy",
+    "terms": "Terms"
+  },
+  "home": {
+    "latest": "Latest",
+    "noPosts": "No posts found.",
+    "readMore": "Read more →",
+    "allPosts": "All Posts →",
+    "publishedOn": "Published on"
+  },
+  "hero": {
+    "badge": "Learn Islam, One Swipe at a Time",
+    "tagline": "Learn your Deen, one swipe at a time",
+    "question": "Tired of doom-scrolling? Put those minutes to work for your Deen.",
+    "subtitle": "DeenUp turns the endless scroll into something that actually matters. Swipe through short, scholar-approved Islamic lessons, take quick quizzes, and build a daily streak — the fun, effortless way to grow your knowledge of Islam, a little every day.",
+    "ctaPrimary": "Join Waitlist",
+    "ctaSecondary": "Learn More",
+    "comingSoon": "Coming Soon",
+    "appStatus": "Join our WhatsApp community"
+  },
+  "features": {
+    "heading": "Grow your Deen, one swipe at a time",
+    "subtitle": "Bite-sized, scholar-approved Islamic learning that turns spare minutes into real knowledge",
+    "learnMore": "Learn more",
+    "aiCompanion": {
+      "title": "A Feed Worth Scrolling",
+      "description": "Swap doom-scrolling for a swipeable feed of short Islamic lessons. Every swipe teaches you something real about your Deen."
+    },
+    "dailyChecklist": {
+      "title": "Learn Through Play",
+      "description": "Bite-sized lessons, daily streaks, levels, and quick quizzes turn growing your Deen into a daily habit you actually keep."
+    },
+    "letters": {
+      "title": "Scholar-Approved, Always",
+      "description": "Every lesson is rooted in the Quran and authentic Sunnah and reviewed by qualified scholars — knowledge you can trust, not algorithm guesswork."
+    }
+  },
+  "cta": {
+    "badge": "Coming Soon to iOS & Android",
+    "heading": "Trade doom-scrolling for your Deen",
+    "subtitle": "Join our WhatsApp community and be the first to know when DeenUp launches",
+    "joinWaitlist": "Join Waitlist",
+    "downloadIOS": "Download on iOS",
+    "downloadAndroid": "Download on Android",
+    "comingSoonText": "Join our community on WhatsApp"
+  },
+  "testimonials": {
+    "heading": "Stories from learners",
+    "subtitle": "See how DeenUp is helping Muslims learn and grow every day",
+    "readMore": "Read full story",
+    "showLess": "Show less"
+  },
+  "faq": {
+    "badge": "FAQ",
+    "heading": "Frequently asked questions",
+    "subtitle": "Everything you need to know about DeenUp",
+    "stillHaveQuestions": "Still have questions?",
+    "contactSupport": "Join Waitlist",
+    "items": [
+      {
+        "question": "What exactly is DeenUp?",
+        "answer": "DeenUp is a learning app for Islamic knowledge — think Duolingo for your Deen, or a halal alternative to endless TikTok scrolling. Instead of doom-scrolling, you swipe through short, scholar-approved lessons, take quick quizzes, and build a daily learning streak. It's designed to make growing your Islamic knowledge fun, simple, and consistent."
+      },
+      {
+        "question": "How is the content kept Islamically accurate?",
+        "answer": "Every lesson on DeenUp is rooted in the Quran and authentic Sunnah and reviewed by qualified scholars before it goes live. We don't use AI or algorithms to generate religious rulings — technology only helps us organize and deliver trustworthy knowledge. You can always see the sources behind what you learn."
+      },
+      {
+        "question": "Is DeenUp good for new Muslims and reverts?",
+        "answer": "Absolutely. DeenUp meets you wherever you are. Bite-sized lessons start from the fundamentals and build up gradually, so new Muslims and reverts can learn the basics at their own pace — without judgment and without feeling overwhelmed. Lifelong Muslims will find plenty to deepen their knowledge too."
+      },
+      {
+        "question": "How is this different from just scrolling social media?",
+        "answer": "DeenUp gives you the same easy, swipeable experience you're used to — but every swipe leaves you with beneficial knowledge instead of wasted time. There's no doom-scrolling, no harmful content, and no algorithm pulling you toward distraction. It's screen time that actually grows your Deen."
+      },
+      {
+        "question": "What languages does DeenUp support?",
+        "answer": "DeenUp currently supports English and Arabic, with the interface automatically switching to a right-to-left (RTL) layout for Arabic. More languages may be added as the community grows."
+      }
+    ]
+  }
+}
