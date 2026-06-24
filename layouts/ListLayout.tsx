@@ -82,9 +82,12 @@ export default function ListLayout({
 
   return (
     <SectionContainer>
-      <div className="divide-y divide-gray-200 dark:divide-gray-700">
+      <div className="divide-y divide-white/8">
         <div className="space-y-2 pt-6 pb-8 md:space-y-5">
-          <h1 className="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14 dark:text-gray-100">
+          <h1
+            className="text-3xl leading-9 font-extrabold tracking-tight text-white sm:text-4xl sm:leading-10 md:text-6xl md:leading-14"
+            style={{ letterSpacing: '-0.03em' }}
+          >
             {title}
           </h1>
           <div className="relative max-w-lg">
@@ -95,11 +98,11 @@ export default function ListLayout({
                 type="text"
                 onChange={(e) => setSearchValue(e.target.value)}
                 placeholder="Search articles"
-                className="focus:border-accent-600 focus:ring-accent-600 block w-full rounded-md border border-gray-300 bg-white px-4 py-2 text-gray-900 dark:border-gray-900 dark:bg-gray-800 dark:text-gray-100"
+                className="block w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white placeholder:text-white/30 focus:border-white/20 focus:outline-none"
               />
             </label>
             <svg
-              className="absolute top-3 right-3 h-5 w-5 text-gray-400 dark:text-gray-300"
+              className="absolute top-3 right-3 h-5 w-5 text-white/30"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -136,18 +139,19 @@ export default function ListLayout({
                       <div className="flex-1 space-y-3">
                         <dl>
                           <dt className="sr-only">Published on</dt>
-                          <dd className="text-base leading-6 font-medium text-gray-500 dark:text-gray-400">
+                          <dd className="text-sm font-medium text-white/30">
                             <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
                           </dd>
                         </dl>
                         <div>
-                          <h3 className="text-2xl leading-8 font-bold tracking-tight text-gray-900 dark:text-gray-100">
+                          <h3
+                            className="text-xl leading-8 font-bold tracking-tight text-white"
+                            style={{ letterSpacing: '-0.02em' }}
+                          >
                             {title}
                           </h3>
                         </div>
-                        <div className="prose max-w-none text-gray-500 dark:text-gray-400">
-                          {summary}
-                        </div>
+                        <div className="prose max-w-none text-white/50">{summary}</div>
                       </div>
                     </div>
                   </Link>

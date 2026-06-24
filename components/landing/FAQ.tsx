@@ -1,6 +1,6 @@
 'use client'
 import { useState } from 'react'
-import { ChevronDown, HelpCircle } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
 
 const faqs = [
   {
@@ -47,57 +47,55 @@ export default function FAQ() {
   }
 
   return (
-    <section className="bg-white py-20 sm:py-28 dark:bg-gray-950">
+    <section className="bg-[#111111] py-24 sm:py-32">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-        <div className="mb-16 text-center">
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[--color-accent-200] bg-[--color-accent-100] px-4 py-2 dark:border-[--color-accent-800] dark:bg-[--color-accent-900]">
-            <HelpCircle className="h-4 w-4 text-[--color-accent-600] dark:text-[--color-accent-400]" />
-            <span className="text-sm font-semibold text-[--color-accent-700] dark:text-[--color-accent-300]">
-              FAQ
-            </span>
-          </div>
-          <h2 className="mb-4 text-3xl font-bold text-[--color-text] sm:text-4xl lg:text-5xl dark:text-white">
-            Frequently asked questions
+      <div className="mx-auto max-w-3xl px-4 sm:px-6">
+        {/* Section header */}
+        <div className="mb-16">
+          <span className="eyebrow">FAQ</span>
+          <h2 className="text-display mt-4 font-bold text-white">
+            Common questions
+            <br />
+            <span className="text-white/40">answered.</span>
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300">
-            Everything you need to know about kegel exercises for men
-          </p>
         </div>
 
-        <div className="space-y-4">
+        {/* Accordion */}
+        <div className="space-y-px">
           {faqs.map((faq, index) => {
             const isExpanded = expandedIndex === index
 
             return (
               <div
                 key={index}
-                className={`rounded-xl border-2 transition-all duration-300 ${
-                  isExpanded
-                    ? 'border-[--color-accent-300] bg-[--color-surface] shadow-lg dark:border-[--color-accent-700] dark:bg-gray-800'
-                    : 'border-gray-200 bg-white hover:border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:hover:border-gray-600'
+                className={`border-b transition-colors duration-200 ${
+                  isExpanded ? 'border-white/15' : 'border-white/8 hover:border-white/12'
                 }`}
               >
                 <button
                   onClick={() => setExpandedIndex(isExpanded ? null : index)}
-                  className="flex w-full items-start justify-between gap-4 px-6 py-5 text-left"
+                  className="flex w-full items-start justify-between gap-4 py-6 text-left"
                 >
-                  <span className="pr-4 text-lg font-semibold text-[--color-text] dark:text-white">
+                  <span
+                    className={`text-base font-semibold tracking-tight transition-colors duration-200 ${
+                      isExpanded ? 'text-white' : 'text-white/70 hover:text-white'
+                    }`}
+                  >
                     {faq.question}
                   </span>
                   <ChevronDown
-                    className={`h-6 w-6 flex-shrink-0 text-[--color-accent-600] transition-transform duration-300 dark:text-[--color-accent-400] ${
-                      isExpanded ? 'rotate-180' : ''
+                    className={`mt-0.5 h-5 w-5 flex-shrink-0 text-white/30 transition-transform duration-300 ${
+                      isExpanded ? 'rotate-180 text-white/60' : ''
                     }`}
                   />
                 </button>
 
                 {isExpanded && (
-                  <div className="animate-fade-in px-6 pb-5">
-                    <p className="leading-relaxed text-gray-600 dark:text-gray-300">{faq.answer}</p>
+                  <div className="animate-fade-in pb-6">
+                    <p className="text-sm leading-relaxed text-white/50">{faq.answer}</p>
                   </div>
                 )}
               </div>
@@ -105,11 +103,13 @@ export default function FAQ() {
           })}
         </div>
 
-        <div className="mt-12 rounded-2xl border border-gray-200 bg-gradient-to-br from-[--color-surface] to-[--color-bg] p-8 text-center dark:border-gray-700 dark:from-gray-800 dark:to-gray-900">
-          <p className="mb-4 text-lg text-black dark:text-white">Still have questions?</p>
+        {/* Contact */}
+        <div className="mt-16 rounded-2xl border border-white/10 p-8 text-center">
+          <p className="mb-2 text-sm font-semibold text-white/70">Still have questions?</p>
+          <p className="mb-6 text-xs text-white/30">We typically respond within 24 hours.</p>
           <a
             href="mailto:support@defykegal.com"
-            className="inline-flex items-center gap-2 rounded-xl bg-[var(--color-accent-500)] px-10 py-4 text-xl font-bold text-white shadow-lg transition-all duration-200 hover:scale-105 hover:bg-[var(--color-accent-600)]"
+            className="inline-flex items-center gap-2 rounded-full border border-white/20 px-8 py-3 text-sm font-semibold text-white/70 transition-all duration-200 hover:border-white/40 hover:text-white"
           >
             Contact Support
           </a>

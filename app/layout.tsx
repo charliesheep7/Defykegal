@@ -2,7 +2,7 @@ import 'css/tailwind.css'
 import 'pliny/search/algolia.css'
 import 'remark-github-blockquote-alert/alert.css'
 
-import { Noto_Sans, DM_Serif_Text } from 'next/font/google'
+import { Geist_Mono, Noto_Sans_Arabic } from 'next/font/google'
 import { Analytics, AnalyticsConfig } from 'pliny/analytics'
 import { SearchProvider, SearchConfig } from 'pliny/search'
 import Header from '@/components/Header'
@@ -10,18 +10,18 @@ import siteMetadata from '@/data/siteMetadata'
 import { ThemeProviders } from './theme-providers'
 import { Metadata } from 'next'
 
-const noto_sans = Noto_Sans({
+const geist_mono = Geist_Mono({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+  weight: ['300', '400', '500', '600', '700'],
   display: 'swap',
-  variable: '--font-noto-sans',
+  variable: '--font-geist-mono',
 })
 
-const dm_serif = DM_Serif_Text({
-  weight: '400',
-  subsets: ['latin'],
+const noto_sans_arabic = Noto_Sans_Arabic({
+  subsets: ['arabic'],
+  weight: ['400', '500', '600', '700'],
   display: 'swap',
-  variable: '--font-dm-serif',
+  variable: '--font-noto-sans-arabic',
 })
 
 export const metadata: Metadata = {
@@ -71,7 +71,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     <html
       lang="en"
       dir="ltr"
-      className={`${noto_sans.variable} ${dm_serif.variable} scroll-smooth`}
+      className={`${geist_mono.variable} ${noto_sans_arabic.variable} dark scroll-smooth`}
       suppressHydrationWarning
     >
       <link
@@ -107,11 +107,10 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       <link
         rel="mask-icon"
         href={`${basePath}/static/favicons/safari-pinned-tab.svg`}
-        color="#3b82f6"
+        color="#ffffff"
       />
-      <meta name="msapplication-TileColor" content="#3b82f6" />
-      <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f8fafc" />
-      <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
+      <meta name="msapplication-TileColor" content="#0a0a0a" />
+      <meta name="theme-color" content="#0a0a0a" />
       <link rel="alternate" type="application/rss+xml" href={`${basePath}/feed.xml`} />
       <script
         type="application/ld+json"
@@ -128,7 +127,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           }),
         }}
       />
-      <body className="bg-gray-50 font-sans text-gray-800 antialiased ltr:pl-[calc(100vw-100%)] dark:bg-gray-950 dark:text-white">
+      <body className="bg-[#0a0a0a] font-sans text-[#f5f5f5] antialiased ltr:pl-[calc(100vw-100%)]">
         <ThemeProviders>
           <Analytics analyticsConfig={siteMetadata.analytics as AnalyticsConfig} />
           <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>

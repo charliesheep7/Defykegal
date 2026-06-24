@@ -5,41 +5,58 @@ const IOS_APP_URL = 'https://apps.apple.com/app/defy-kegel-for-men/id0000000000'
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-[--color-bg] via-[#eef2ff] to-[--color-surface] opacity-70" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.10),transparent_55%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_65%,rgba(37,99,235,0.06),transparent_55%)]" />
+    <section className="relative overflow-hidden bg-[#0a0a0a]">
+      {/* Subtle radial glow — top left */}
+      <div className="pointer-events-none absolute inset-0">
+        <div className="absolute -top-40 -left-40 h-[600px] w-[600px] rounded-full bg-white/[0.03] blur-3xl" />
+        <div className="absolute top-1/2 -right-40 h-[500px] w-[500px] rounded-full bg-white/[0.02] blur-3xl" />
+      </div>
 
-      <div className="relative mx-auto max-w-7xl px-4 pt-20 pb-24 sm:px-6 sm:pt-28 sm:pb-32 lg:px-8">
-        <div className="animate-fade-in grid items-center gap-10 lg:grid-cols-2">
+      <div className="relative mx-auto max-w-7xl px-4 pt-20 pb-24 sm:px-6 sm:pt-28 sm:pb-32 lg:px-10">
+        <div className="grid items-center gap-12 lg:grid-cols-2">
           {/* Text content */}
-          <div className="space-y-6 text-left lg:order-1">
-            <div className="inline-flex items-center gap-2 rounded-full border border-[--color-accent-200] bg-[--color-accent-100] px-4 py-1.5 dark:border-[--color-accent-800] dark:bg-[--color-accent-900]">
-              <span className="h-2 w-2 rounded-full bg-[--color-accent-500]" />
-              <span className="text-sm font-semibold text-[--color-accent-700] dark:text-[--color-accent-300]">
-                Science-Backed · Built for Men
-              </span>
+          <div className="space-y-8 text-left lg:order-1">
+            {/* Eyebrow */}
+            <div className="animate-fade-in inline-flex items-center gap-2">
+              <span className="h-px w-8 bg-white/20" />
+              <span className="eyebrow">Science-Backed · Built for Men</span>
             </div>
 
-            <h1 className="text-[clamp(1.9rem,3.4vw,3.25rem)] leading-tight font-bold tracking-tight text-[--color-text] dark:text-white">
-              Kegel Exercises for Men That Actually Work
+            {/* Headline */}
+            <h1
+              className="animate-fade-in animation-delay-200 text-hero font-bold text-white"
+              style={{ opacity: 0 }}
+            >
+              Kegel Exercises
+              <br />
+              <span className="text-white/40">That Actually</span>
+              <br />
+              Work.
             </h1>
 
-            <p className="text-base leading-relaxed text-gray-600 sm:text-lg dark:text-gray-300">
+            {/* Body */}
+            <p
+              className="animate-fade-in animation-delay-400 max-w-lg text-base leading-relaxed text-white/50 sm:text-lg"
+              style={{ opacity: 0 }}
+            >
               Defy delivers guided kegel training clinically proven to improve erections, prevent
               erectile dysfunction, and boost pelvic floor strength — in minutes a day.
             </p>
 
-            <div className="flex flex-col gap-4 pt-2">
+            {/* CTA */}
+            <div
+              className="animate-fade-in animation-delay-400 flex flex-col gap-4 pt-2"
+              style={{ opacity: 0 }}
+            >
               <div className="flex flex-wrap items-center gap-3">
                 <a
                   href={IOS_APP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-2xl bg-[var(--color-accent-500)] px-8 py-4 text-lg font-bold text-white shadow-lg transition-all duration-200 hover:scale-105 hover:bg-[var(--color-accent-600)]"
+                  className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-bold text-black transition-opacity duration-200 hover:opacity-90"
                 >
                   <svg
-                    className="h-6 w-6"
+                    className="h-5 w-5"
                     viewBox="0 0 24 24"
                     fill="currentColor"
                     aria-hidden="true"
@@ -48,12 +65,15 @@ export default function Hero() {
                   </svg>
                   Download on iOS
                 </a>
-                <span className="inline-flex items-center gap-2 rounded-full border border-[--color-accent-200] bg-[--color-accent-100] px-4 py-2 text-sm font-semibold text-[--color-accent-700] dark:border-[--color-accent-800] dark:bg-[--color-accent-900] dark:text-[--color-accent-300]">
-                  Free to Start
-                </span>
+                <a
+                  href="#features"
+                  className="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-4 text-sm font-semibold text-white/70 transition-all duration-200 hover:border-white/40 hover:text-white"
+                >
+                  See how it works
+                </a>
               </div>
-              <span className="text-sm text-gray-500 dark:text-gray-400">
-                Trusted by 10,000+ men · Private & Discreet
+              <span className="text-xs tracking-wide text-white/30">
+                Free to start · Trusted by 10,000+ men · Private & Discreet
               </span>
             </div>
           </div>
@@ -74,7 +94,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="absolute right-0 bottom-0 left-0 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent dark:via-gray-700" />
+      <div className="absolute right-0 bottom-0 left-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
     </section>
   )
 }

@@ -1,48 +1,38 @@
 'use client'
 
-import clsx from 'clsx'
-import { ShieldCheck, TrendingUp, ChevronDown, Award } from 'lucide-react'
 import { useState } from 'react'
+import { ChevronDown } from 'lucide-react'
 
 const testimonials = [
   {
+    id: 0,
     category: 'Bedroom Confidence',
-    icon: ShieldCheck,
-    iconColor: 'text-blue-600 dark:text-blue-400',
-    bgColor: 'bg-blue-50 dark:bg-blue-900/20',
-    borderColor: 'border-blue-200 dark:border-blue-800',
     name: 'Marcus T.',
-    title: 'Age 38',
+    age: '38',
     quote:
       'After 8 weeks with Defy, the difference in the bedroom is real. I had no idea kegels could do this much. My confidence is back.',
     fullStory:
       'I was skeptical — kegels always felt like something for women after childbirth. Then I read some research on pubmed about pelvic floor training and erectile function and decided to try Defy. The guided sessions are short and the app keeps me honest with the streak tracker. Eight weeks in, the improvement in firmness and control was undeniable. I wish someone had told me about this years ago.',
   },
   {
+    id: 1,
     category: 'Consistent Progress',
-    icon: TrendingUp,
-    iconColor: 'text-emerald-600 dark:text-emerald-400',
-    bgColor: 'bg-emerald-50 dark:bg-emerald-900/20',
-    borderColor: 'border-emerald-200 dark:border-emerald-800',
     name: 'James R.',
-    title: 'Age 52',
+    age: '52',
     quote:
       'Doctor suggested pelvic floor training after my prostatectomy. Defy made it actually doable. 30-day streak and the improvement is undeniable.',
     fullStory:
       "After my surgery, my urologist recommended pelvic floor exercises but gave me almost no guidance on how to actually do them. I tried a few YouTube videos and gave up. Defy gave me a proper progressive program with audio cues telling me exactly when to squeeze and release. The progress charts showing my weekly reps helped me see I was actually improving even when it didn't feel like it yet.",
   },
   {
+    id: 2,
     category: 'Long-Term Results',
-    icon: Award,
-    iconColor: 'text-purple-600 dark:text-purple-400',
-    bgColor: 'bg-purple-50 dark:bg-purple-900/20',
-    borderColor: 'border-purple-200 dark:border-purple-800',
     name: 'David K.',
-    title: 'Age 44',
+    age: '44',
     quote:
       "Finally an app that explains WHY, not just how. 4-month streak and I'm a different person. The education inside Defy is what made me commit.",
     fullStory:
-      "I've tried a dozen health apps and quit them all within two weeks. What kept me with Defy was the education layer — understanding that I was literally rebuilding a muscle I'd neglected my entire life made the daily sessions feel purposeful instead of random. Four months later I've noticed improvements in stamina, control, and overall confidence. The streak counter became addictive in the best way.",
+      "I've tried a dozen health apps and quit them all within two weeks. What kept me with Defy was the education layer — understanding that I was literally rebuilding a muscle I'd neglected my entire life made the daily sessions feel purposeful instead of random. Four months later I've noticed improvements in stamina, control, and overall confidence.",
   },
 ]
 
@@ -50,79 +40,67 @@ export default function Testimonials() {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null)
 
   return (
-    <section className="bg-gradient-to-b from-white to-[--color-bg] py-20 sm:py-28 dark:from-gray-950 dark:to-gray-900">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mb-16 text-center">
-          <h2 className="mb-4 text-3xl font-bold text-[--color-text] sm:text-4xl lg:text-5xl dark:text-white">
-            Real results from real men
+    <section className="bg-[#0a0a0a] py-24 sm:py-32">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
+        {/* Section header */}
+        <div className="mb-16">
+          <span className="eyebrow">Testimonials</span>
+          <h2 className="text-display mt-4 font-bold text-white">
+            Real results
+            <br />
+            <span className="text-white/40">from real men.</span>
           </h2>
-          <p className="mx-auto max-w-2xl text-lg text-gray-600 sm:text-xl dark:text-gray-300">
-            See how Defy is helping men reclaim their performance and confidence every day
-          </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {testimonials.map((testimonial, index) => {
-            const Icon = testimonial.icon
-            const isExpanded = expandedIndex === index
+        {/* Testimonials grid */}
+        <div className="grid grid-cols-1 gap-px bg-white/8 md:grid-cols-2 lg:grid-cols-3">
+          {testimonials.map((testimonial) => {
+            const isExpanded = expandedIndex === testimonial.id
 
             return (
               <div
-                key={index}
-                className={clsx(
-                  'group relative rounded-2xl border-2 p-6 transition-all duration-300 hover:shadow-xl',
-                  testimonial.borderColor,
-                  testimonial.bgColor,
-                  isExpanded && ['ring-2', 'shadow-2xl', 'ring-[--color-accent-500]']
-                )}
+                key={testimonial.id}
+                className="flex flex-col bg-[#0a0a0a] p-10 transition-colors duration-300 hover:bg-[#111111]"
               >
-                <div className="mb-4 flex items-center gap-3">
-                  <div
-                    className={`rounded-lg p-2 ${testimonial.bgColor} border ${testimonial.borderColor}`}
-                  >
-                    <Icon className={`h-5 w-5 ${testimonial.iconColor}`} />
-                  </div>
-                  <span
-                    className={`text-sm font-semibold ${testimonial.iconColor} tracking-wide uppercase`}
-                  >
-                    {testimonial.category}
-                  </span>
+                {/* Category label */}
+                <div className="mb-6">
+                  <span className="eyebrow">{testimonial.category}</span>
                 </div>
 
-                <blockquote className="mb-4">
-                  <p className="leading-relaxed text-gray-700 italic dark:text-gray-200">
+                {/* Quote */}
+                <blockquote className="mb-6 flex-1">
+                  <p className="text-base leading-relaxed text-white/70 italic">
                     &ldquo;{testimonial.quote}&rdquo;
                   </p>
                 </blockquote>
 
+                {/* Expanded story */}
                 {isExpanded && (
-                  <div className="animate-fade-in mb-4 rounded-lg border border-gray-200 bg-white/50 p-4 dark:border-gray-700 dark:bg-gray-800/50">
-                    <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-300">
-                      {testimonial.fullStory}
-                    </p>
+                  <div className="animate-fade-in mb-6 border-t border-white/8 pt-6">
+                    <p className="text-sm leading-relaxed text-white/50">{testimonial.fullStory}</p>
                   </div>
                 )}
 
-                <div className="mt-4 flex items-center justify-between border-t border-gray-200 pt-4 dark:border-gray-700">
-                  <div>
-                    <p className="font-semibold text-[--color-text] dark:text-white">
-                      {testimonial.name}
-                    </p>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">{testimonial.title}</p>
+                {/* Author + expand */}
+                <div className="mt-auto border-t border-white/8 pt-6">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <p className="font-semibold tracking-tight text-white">{testimonial.name}</p>
+                      <p className="text-sm text-white/30">Age {testimonial.age}</p>
+                    </div>
+                    <button
+                      onClick={() => setExpandedIndex(isExpanded ? null : testimonial.id)}
+                      className="flex items-center gap-1.5 text-xs font-semibold tracking-wide text-white/30 uppercase transition-colors duration-200 hover:text-white/60"
+                    >
+                      {isExpanded ? 'Less' : 'Full story'}
+                      <ChevronDown
+                        className={`h-3.5 w-3.5 transition-transform duration-200 ${
+                          isExpanded ? 'rotate-180' : ''
+                        }`}
+                      />
+                    </button>
                   </div>
                 </div>
-
-                <button
-                  onClick={() => setExpandedIndex(isExpanded ? null : index)}
-                  className="mt-4 flex w-full items-center justify-center gap-2 rounded-lg border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-[--color-accent-600] transition-all duration-200 hover:border-[--color-accent-300] hover:bg-[--color-surface] dark:border-gray-700 dark:bg-gray-800 dark:text-[--color-accent-400] dark:hover:border-[--color-accent-700] dark:hover:bg-gray-700"
-                >
-                  {isExpanded ? 'Show less' : 'Read full story'}
-                  <ChevronDown
-                    className={`h-4 w-4 transition-transform duration-200 ${
-                      isExpanded ? 'rotate-180' : ''
-                    }`}
-                  />
-                </button>
               </div>
             )
           })}
