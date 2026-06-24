@@ -50,5 +50,11 @@ yarn-error.log*
 # /seo-blog-generator
 prd-seogen.md
 
+# Raw keyword exports (use data/keywords.csv for the filtered list)
+kw.csv
+
+# TypeScript build info
+tsconfig.tsbuildinfo
+
 # Skill-local installs (platform-specific, self-installed at runtime)
 .claude/skills/*/node_modules/
