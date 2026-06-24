@@ -42,7 +42,9 @@ export default async function LocaleTagPage(props: {
   const tag = decodeURI(params.tag)
   const { lang } = params
 
-  const filteredBlogs = allBlogs.filter((post) => post.lang === lang || (!post.lang && lang === 'en'))
+  const filteredBlogs = allBlogs.filter(
+    (post) => post.lang === lang || (!post.lang && lang === 'en')
+  )
   const taggedPosts = filteredBlogs.filter(
     (post) => post.tags && post.tags.map((t) => slug(t)).includes(tag)
   )

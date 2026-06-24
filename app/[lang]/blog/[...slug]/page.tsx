@@ -128,7 +128,9 @@ export default async function Page(props: { params: Promise<{ slug: string[]; la
   const { lang } = params
 
   // Filter blogs by language
-  const filteredBlogs = allBlogs.filter((post) => post.lang === lang || (!post.lang && lang === 'en'))
+  const filteredBlogs = allBlogs.filter(
+    (post) => post.lang === lang || (!post.lang && lang === 'en')
+  )
   const sortedCoreContents = allCoreContent(sortPosts(filteredBlogs))
   const postIndex = sortedCoreContents.findIndex((p) => p.slug === slug)
 

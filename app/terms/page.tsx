@@ -5,7 +5,6 @@ export const metadata = genPageMetadata({
   title: 'Terms of Service',
   description:
     'Read the rules, acceptable use guidelines, and legal terms that govern your use of the Defy app.',
-  
 })
 
 export default function TermsPage() {
@@ -18,8 +17,8 @@ export default function TermsPage() {
         </p>
         <p>
           Welcome to Defy. Please read these Terms of Service ("Terms") carefully. By accessing or
-          using Defy's mobile application or related services ("Services"), you agree to be bound
-          by these Terms. If you do not agree, please stop using the Services.
+          using Defy's mobile application or related services ("Services"), you agree to be bound by
+          these Terms. If you do not agree, please stop using the Services.
         </p>
 
         <h2>1. Eligibility</h2>
@@ -31,8 +30,8 @@ export default function TermsPage() {
         <h2>2. Your Account</h2>
         <p>
           You may sign in using email, Apple, or Google. You are responsible for maintaining the
-          confidentiality of your login information. Notify us immediately at support@defykegal.com if
-          you believe your account has been compromised.
+          confidentiality of your login information. Notify us immediately at support@defykegal.com
+          if you believe your account has been compromised.
         </p>
         <p>
           We may suspend or terminate your account if you violate these Terms or engage in harmful
@@ -72,9 +71,9 @@ export default function TermsPage() {
         <h2>5. Health Disclaimer</h2>
         <p>
           Defy provides general wellness and exercise information for educational purposes only.
-          Content within the app does not constitute medical advice. If you have a medical condition,
-          pelvic floor disorder, or are recovering from surgery, consult a qualified healthcare
-          provider before beginning any exercise program.
+          Content within the app does not constitute medical advice. If you have a medical
+          condition, pelvic floor disorder, or are recovering from surgery, consult a qualified
+          healthcare provider before beginning any exercise program.
         </p>
 
         <h2>6. User Content and Moderation</h2>
@@ -84,8 +83,8 @@ export default function TermsPage() {
           the Services.
         </p>
         <p>
-          We may review, remove, or restrict content that violates these Terms or legal requirements.
-          You may report concerns to support@defykegal.com.
+          We may review, remove, or restrict content that violates these Terms or legal
+          requirements. You may report concerns to support@defykegal.com.
         </p>
 
         <h2>7. No Professional Medical Advice</h2>
@@ -153,8 +152,7 @@ export default function TermsPage() {
         <p>To the maximum extent permitted by law:</p>
         <ul>
           <li>
-            Defy is not liable for indirect, incidental, special, consequential, or punitive
-            damages
+            Defy is not liable for indirect, incidental, special, consequential, or punitive damages
           </li>
           <li>
             Defy is not liable for lost data, lost profits, emotional harm, or reputational damage
@@ -167,8 +165,8 @@ export default function TermsPage() {
 
         <h2>16. Indemnification</h2>
         <p>
-          You agree to defend and indemnify Defy and its team from any claims, damages, or
-          expenses arising from your use of the Services or your violation of these Terms.
+          You agree to defend and indemnify Defy and its team from any claims, damages, or expenses
+          arising from your use of the Services or your violation of these Terms.
         </p>
 
         <h2>17. Termination</h2>
@@ -189,8 +187,8 @@ export default function TermsPage() {
 
         <h2>20. Entire Agreement</h2>
         <p>
-          These Terms constitute the complete agreement between you and Defy regarding the
-          Services. If any part is found unenforceable, the remaining parts still apply.
+          These Terms constitute the complete agreement between you and Defy regarding the Services.
+          If any part is found unenforceable, the remaining parts still apply.
         </p>
 
         <h2>21. Contact Us</h2>

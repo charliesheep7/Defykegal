@@ -14,9 +14,9 @@ const testimonials = [
     name: 'Marcus T.',
     title: 'Age 38',
     quote:
-      "After 8 weeks with Defy, the difference in the bedroom is real. I had no idea kegels could do this much. My confidence is back.",
+      'After 8 weeks with Defy, the difference in the bedroom is real. I had no idea kegels could do this much. My confidence is back.',
     fullStory:
-      "I was skeptical — kegels always felt like something for women after childbirth. Then I read some research on pubmed about pelvic floor training and erectile function and decided to try Defy. The guided sessions are short and the app keeps me honest with the streak tracker. Eight weeks in, the improvement in firmness and control was undeniable. I wish someone had told me about this years ago.",
+      'I was skeptical — kegels always felt like something for women after childbirth. Then I read some research on pubmed about pelvic floor training and erectile function and decided to try Defy. The guided sessions are short and the app keeps me honest with the streak tracker. Eight weeks in, the improvement in firmness and control was undeniable. I wish someone had told me about this years ago.',
   },
   {
     category: 'Consistent Progress',

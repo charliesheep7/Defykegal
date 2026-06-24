@@ -5,7 +5,6 @@ export const metadata = genPageMetadata({
   title: 'Privacy Policy',
   description:
     'Understand what personal data Defy collects, how it is used, and the safeguards that protect it.',
-  
 })
 
 export default function PrivacyPage() {

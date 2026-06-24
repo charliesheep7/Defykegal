@@ -58,7 +58,9 @@ export default function PrivacyPage() {
           <li>Maintain app functionality and prevent abuse</li>
           <li>Comply with legal obligations</li>
         </ul>
-        <p>We do not sell your data. We do not use your content to train machine-learning models.</p>
+        <p>
+          We do not sell your data. We do not use your content to train machine-learning models.
+        </p>
 
         <h2>Data Retention</h2>
         <ul>

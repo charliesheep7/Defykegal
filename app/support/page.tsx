@@ -18,8 +18,7 @@ export default function SupportPage() {
 
         <h2>Contact</h2>
         <p>
-          <strong>Email:</strong>{' '}
-          <a href="mailto:support@defykegal.com">support@defykegal.com</a>
+          <strong>Email:</strong> <a href="mailto:support@defykegal.com">support@defykegal.com</a>
         </p>
 
         <h2>What to Include</h2>

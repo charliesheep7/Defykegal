@@ -31,7 +31,7 @@ const features = [
     icon: BookOpen,
     title: 'Science-Backed Education',
     description:
-      "Learn exactly how kegel exercises target ED, premature ejaculation, and urinary control — explained in plain English, backed by urological research.",
+      'Learn exactly how kegel exercises target ED, premature ejaculation, and urinary control — explained in plain English, backed by urological research.',
     iconBg: 'bg-purple-100 dark:bg-purple-900/30',
     iconColor: 'text-purple-600 dark:text-purple-400',
     fullDescription:
