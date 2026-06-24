@@ -82,7 +82,7 @@ export default function Hero() {
           <div className="relative lg:order-2">
             <div className="relative mx-auto aspect-[4/5] w-full max-w-xl">
               <Image
-                src="/static/images/app_hero.webp"
+                src="/static/images/app_hero_dark.png"
                 alt="Defy app — guided kegel exercises for men to improve erections and beat ED"
                 fill
                 className="object-contain"
