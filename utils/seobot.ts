@@ -1,8 +1,13 @@
 import { BlogClient } from 'seobot'
 import siteMetadata from '@/data/siteMetadata'
 
-// Initialize the SEObot client
-const client = new BlogClient(process.env.SEOBOT_API_KEY || '')
+// Lazily initialized — only created when an API key is present
+let _client: BlogClient | null = null
+function getClient(): BlogClient | null {
+  if (!process.env.SEOBOT_API_KEY) return null
+  if (!_client) _client = new BlogClient(process.env.SEOBOT_API_KEY)
+  return _client
+}
 
 // Type definition for normalized blog post
 export interface SeoBotPost {
@@ -41,11 +46,10 @@ export interface SeoBotPost {
  * Fetch all posts from SEObot API
  */
 export async function getSeoBotPosts(): Promise<SeoBotPost[]> {
+  const client = getClient()
+  if (!client) return []
   try {
-    // Fetch the first 100 posts (adjust if you need more)
     const { articles } = await client.getArticles(0, 100)
-
-    // Normalize SEObot posts to match ContentLayer structure
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return articles.map((post: any) => normalizeSeoBotPost(post))
   } catch (error) {
@@ -58,13 +62,11 @@ export async function getSeoBotPosts(): Promise<SeoBotPost[]> {
  * Fetch a single post from SEObot by slug
  */
 export async function getSeoBotPostBySlug(slug: string): Promise<SeoBotPost | null> {
+  const client = getClient()
+  if (!client) return null
   try {
     const post = await client.getArticle(slug)
-
-    if (!post) {
-      return null
-    }
-
+    if (!post) return null
     return normalizeSeoBotPost(post)
   } catch (error) {
     console.error(`Error fetching SEObot post with slug ${slug}:`, error)
