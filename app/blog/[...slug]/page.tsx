@@ -13,7 +13,6 @@ import PostBanner from '@/layouts/PostBanner'
 import { Metadata } from 'next'
 import siteMetadata from '@/data/siteMetadata'
 import { notFound } from 'next/navigation'
-import { getSeoBotPostBySlug, getSeoBotPosts, mergePosts } from '@/utils/seobot'
 
 const defaultLayout = 'PostLayout'
 const layouts = {
@@ -71,24 +70,10 @@ export async function generateMetadata(props: {
   const params = await props.params
   const slug = decodeURI(params.slug.join('/'))
 
-  // First, try to find the post in ContentLayer
-  let post = allBlogs.find((p) => p.slug === slug && (p.lang === 'en' || !p.lang))
-
-  // If not found in ContentLayer, try SEObot
-  if (!post) {
-    const seoBotPost = await getSeoBotPostBySlug(slug)
-    if (!seoBotPost) {
-      return
-    }
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    post = seoBotPost as any
-  }
-
-  // At this point, post is guaranteed to be defined
+  const post = allBlogs.find((p) => p.slug === slug && (p.lang === 'en' || !p.lang))
   if (!post) return
 
   const authorDetails = resolveAuthorDetails(post.authors)
-
   const publishedAt = new Date(post.date).toISOString()
   const modifiedAt = new Date(post.lastmod || post.date).toISOString()
   const authors = authorDetails.map((author) => author.name)
@@ -96,19 +81,13 @@ export async function generateMetadata(props: {
   if (post.images) {
     imageList = typeof post.images === 'string' ? [post.images] : post.images
   }
-  const ogImages = imageList.map((img) => {
-    return {
-      url: img && img.includes('http') ? img : siteMetadata.siteUrl + img,
-    }
-  })
-  // Add the keywords if available (SEObot posts have metaKeywords)
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const keywords = (post as any).metaKeywords
+  const ogImages = imageList.map((img) => ({
+    url: img && img.includes('http') ? img : siteMetadata.siteUrl + img,
+  }))
 
   return {
     title: post.title,
     description: post.summary,
-    keywords: keywords || undefined,
     openGraph: {
       title: post.title,
       description: post.summary,
@@ -130,7 +109,6 @@ export async function generateMetadata(props: {
 }
 
 export const generateStaticParams = async () => {
-  // Generate params for English posts only
   const englishBlogs = allBlogs.filter((p) => p.lang === 'en' || !p.lang)
   return englishBlogs.map((p) => ({ slug: p.slug.split('/').map((name) => decodeURI(name)) }))
 }
@@ -139,46 +117,23 @@ export default async function Page(props: { params: Promise<{ slug: string[] }> 
   const params = await props.params
   const slug = decodeURI(params.slug.join('/'))
 
-  // Try to find post in ContentLayer first
-  const filteredBlogs = allBlogs.filter((post) => post.lang === 'en' || !post.lang)
   const post = allBlogs.find((p) => p.slug === slug && (p.lang === 'en' || !p.lang)) as
     | Blog
     | undefined
 
-  // If not found in ContentLayer, try SEObot
-  const seoBotPost = !post ? await getSeoBotPostBySlug(slug) : null
+  if (!post) return notFound()
 
-  if (!post && !seoBotPost) {
-    return notFound()
-  }
+  const filteredBlogs = allBlogs.filter((p) => p.lang === 'en' || !p.lang)
+  const sortedPosts = allCoreContent(sortPosts(filteredBlogs))
+  const postIndex = sortedPosts.findIndex((p) => p.slug === slug)
+  const prev = postIndex !== -1 ? sortedPosts[postIndex + 1] : null
+  const next = postIndex !== -1 ? sortedPosts[postIndex - 1] : null
 
-  // Merge ContentLayer posts with SEObot posts for prev/next
-  const seoBotPosts = await getSeoBotPosts()
-  const contentLayerPosts = allCoreContent(sortPosts(filteredBlogs))
-  const allPosts = mergePosts(contentLayerPosts, seoBotPosts)
+  const authorDetails = resolveAuthorDetails(post.authors)
+  const mainContent = coreContent(post)
 
-  const postIndex = allPosts.findIndex((p) => p.slug === slug)
-  const prev = postIndex !== -1 ? allPosts[postIndex + 1] : null
-  const next = postIndex !== -1 ? allPosts[postIndex - 1] : null
-
-  // Use the post from the appropriate source
-  const currentPost = post || seoBotPost
-  const isSeoBotPost = !post && seoBotPost
-
-  // TypeScript guard - currentPost is guaranteed to exist at this point
-  if (!currentPost) return notFound()
-
-  const authorDetails = resolveAuthorDetails(currentPost.authors)
-
-  const mainContent = post
-    ? coreContent(post)
-    : {
-        ...seoBotPost,
-        body: seoBotPost?.body.raw,
-      }
-
-  const postUrl = `${siteMetadata.siteUrl}/blog/${currentPost.slug}`
-  const jsonLd = currentPost.structuredData || {}
+  const postUrl = `${siteMetadata.siteUrl}/blog/${post.slug}`
+  const jsonLd = post.structuredData || {}
   jsonLd['author'] = buildJsonLdAuthors(authorDetails)
   jsonLd['publisher'] = {
     '@type': 'Organization',
@@ -196,11 +151,11 @@ export default async function Page(props: { params: Promise<{ slug: string[] }> 
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: siteMetadata.siteUrl },
       { '@type': 'ListItem', position: 2, name: 'Blog', item: `${siteMetadata.siteUrl}/blog` },
-      { '@type': 'ListItem', position: 3, name: currentPost.title, item: postUrl },
+      { '@type': 'ListItem', position: 3, name: post.title, item: postUrl },
     ],
   }
 
-  const Layout = layouts[currentPost.layout || defaultLayout]
+  const Layout = layouts[post.layout || defaultLayout]
 
   return (
     <>
@@ -213,26 +168,7 @@ export default async function Page(props: { params: Promise<{ slug: string[] }> 
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
       />
       <Layout content={mainContent} authorDetails={authorDetails} next={next} prev={prev}>
-        {isSeoBotPost && seoBotPost ? (
-          <>
-            {seoBotPost.images && seoBotPost.images[0] && (
-              <div className="mb-8">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={seoBotPost.images[0]}
-                  alt={seoBotPost.title}
-                  className="h-auto w-full rounded-lg"
-                />
-              </div>
-            )}
-            <div
-              className="prose dark:prose-dark max-w-none"
-              dangerouslySetInnerHTML={{ __html: seoBotPost.body.raw }}
-            />
-          </>
-        ) : post ? (
-          <MDXLayoutRenderer code={post.body.code} components={components} toc={post.toc} />
-        ) : null}
+        <MDXLayoutRenderer code={post.body.code} components={components} toc={post.toc} />
       </Layout>
     </>
   )
