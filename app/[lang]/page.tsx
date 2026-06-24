@@ -4,32 +4,27 @@ import CTA from '@/components/landing/CTA'
 import MediaTicker from '@/components/landing/MediaTicker'
 import Testimonials from '@/components/landing/Testimonials'
 import FAQ from '@/components/landing/FAQ'
-import { getDictionary } from './dictionaries'
-import { , genPageMetadata } from 'app/seo'
+import { genPageMetadata } from 'app/seo'
 
 export function generateStaticParams() {
-  return [{ lang: 'ar' }]
+  return [{ lang: 'en' }]
 }
 
-export default async function LangHome({ params }: { params: Promise<{ lang: 'ar' }> }) {
-  const { lang } = await params
-  const dict = await getDictionary(lang)
-
+export default async function LangHome({ params }: { params: Promise<{ lang: 'en' }> }) {
   return (
     <div className="flex flex-col">
-      <Hero lang={lang} dict={dict} />
-      <Features lang={lang} dict={dict} />
-      <CTA lang={lang} dict={dict} />
+      <Hero />
+      <Features />
+      <CTA />
       <MediaTicker />
-      <Testimonials lang={lang} dict={dict} />
-      <FAQ lang={lang} dict={dict} />
+      <Testimonials />
+      <FAQ />
     </div>
   )
 }
 
 export const metadata = genPageMetadata({
-  title: 'ديّن أب — تعلّم دينك مع كل تمريرة',
+  title: 'Defy — Kegel Exercises for Men',
   description:
-    'يحوّل ديّن أب التصفح بلا فائدة إلى تعلّم — موجز قصير وممتع من المعرفة الإسلامية الموثوقة المعتمدة من العلماء. ابنِ عادة يومية ونمِّ دينك.',
-  
+    'Guided kegel workouts clinically proven to strengthen erections, beat ED, and improve sexual performance. Download Defy free on iOS.',
 })

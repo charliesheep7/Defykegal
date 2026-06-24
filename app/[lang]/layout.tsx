@@ -7,18 +7,17 @@ export const dynamic = 'force-static'
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ lang: 'ar' }>
+  params: Promise<{ lang: 'en' }>
 }): Promise<Metadata> {
-  const { lang } = await params
   return {
     openGraph: {
-      locale: 'ar',
+      locale: 'en_US',
     },
   }
 }
 
 export function generateStaticParams() {
-  return [{ lang: 'ar' }]
+  return [{ lang: 'en' }]
 }
 
 export default async function LangLayout({
@@ -26,7 +25,7 @@ export default async function LangLayout({
   params,
 }: {
   children: React.ReactNode
-  params: Promise<{ lang: 'ar' }>
+  params: Promise<{ lang: 'en' }>
 }) {
   const { lang } = await params
   const dict = await getDictionary(lang)

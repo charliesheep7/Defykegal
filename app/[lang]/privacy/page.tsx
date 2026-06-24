@@ -2,121 +2,114 @@ import { genPageMetadata } from 'app/seo'
 import SectionContainer from '@/components/SectionContainer'
 
 export const metadata = genPageMetadata({
-  title: 'سياسة الخصوصية',
+  title: 'Privacy Policy',
   description:
-    'افهم البيانات الشخصية التي يجمعها ديّن أب، وكيف يتم استخدامها، والضمانات التي تحميها.',
-  alternates: ('/privacy', { currentLanguage: 'ar' }),
+    'Learn what personal data Defy collects, how it is used, and the safeguards that protect it.',
 })
 
-export default function PrivacyPageAr() {
+export default function PrivacyPage() {
   return (
     <SectionContainer>
-      <div className="prose dark:prose-invert max-w-none py-8" dir="rtl">
-        <h1>سياسة الخصوصية</h1>
+      <div className="prose dark:prose-invert max-w-none py-8">
+        <h1>Privacy Policy</h1>
         <p>
-          <strong>آخر تحديث: [25 أكتوبر 2025]</strong>
+          <strong>Last updated: October 25, 2025</strong>
         </p>
         <p>
-          ديّن أب ("نحن" أو "لنا" أو "خاصتنا") ملتزم بحماية خصوصيتك. توضح سياسة الخصوصية هذه كيفية
-          جمعنا واستخدامنا وحماية معلوماتك عند استخدام تطبيق الهاتف المحمول أو الخدمات ذات الصلة
-          ("الخدمات").
+          Defy (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) is committed to protecting your
+          privacy. This Privacy Policy explains how we collect, use, and protect your information
+          when you use our mobile application or related services (&quot;Services&quot;).
         </p>
         <p>
-          <strong>إذا كنت لا توافق على سياسة الخصوصية هذه، يرجى عدم استخدام ديّن أب.</strong>
+          <strong>If you do not agree to this Privacy Policy, please do not use Defy.</strong>
         </p>
 
-        <h2>المعلومات التي نجمعها</h2>
-        <p>نجمع الأنواع التالية من المعلومات:</p>
+        <h2>Information We Collect</h2>
 
-        <h3>1. المعلومات التي تقدمها</h3>
+        <h3>1. Information You Provide</h3>
         <ul>
-          <li>عنوان البريد الإلكتروني لإنشاء الحساب والمصادقة</li>
-          <li>اسم العرض</li>
+          <li>Email address for account creation and authentication</li>
+          <li>Display name</li>
         </ul>
-        <p>نحن لا نجمع صور الملف الشخصي أو الصور التي يحملها المستخدمون.</p>
+        <p>We do not collect profile pictures or user-uploaded images.</p>
 
-        <h3>2. بيانات المحادثة</h3>
+        <h3>2. Workout &amp; Usage Data</h3>
         <ul>
-          <li>الرسائل التي ترسلها إلى المساعد الذكي</li>
+          <li>Kegel exercise session records (sets, reps, duration)</li>
+          <li>App usage patterns to improve the experience</li>
         </ul>
-        <p>يتم تخزين سجل المحادثة بشكل خاص لمدة تصل إلى 30 يومًا أو حتى تقوم بمسحه في التطبيق.</p>
-        <p>نحن لا نصل إلى محادثاتك أو نقرأها. يتم معالجتها فقط لتقديم الخدمة.</p>
+        <p>Your workout history is stored privately and is not shared with third parties.</p>
 
-        <h3>3. معلومات الجهاز</h3>
+        <h3>3. Device Information</h3>
         <ul>
           <li>
-            طراز الجهاز، وإصدار نظام التشغيل، والمعلومات التقنية ذات الصلة (للأمان والوظائف
-            الأساسية)
+            Device model, OS version, and related technical information (for security and core
+            functionality)
           </li>
         </ul>
-        <p>نحن لا نجمع الموقع الدقيق أو تحليلات السلوك أو معرفات الإعلانات.</p>
-
-        <h2>كيف نستخدم معلوماتك</h2>
-        <p>نستخدم معلوماتك من أجل:</p>
-        <ul>
-          <li>توفير الخدمات وتحسينها وتخصيصها</li>
-          <li>مصادقة المستخدمين وتأمين الحسابات</li>
-          <li>الحفاظ على وظائف التطبيق ومنع إساءة الاستخدام</li>
-          <li>الامتثال للالتزامات القانونية</li>
-        </ul>
-        <p>نحن لا نبيع بياناتك. نحن لا نستخدم المحتوى الخاص بك لتدريب نماذج التعلم الآلي.</p>
-
-        <h2>معالجة الذكاء الاصطناعي</h2>
         <p>
-          قد تتم معالجة إدخالات المستخدم من قبل مزودي خدمات الذكاء الاصطناعي الموثوق بهم مثل OpenAI
-          فقط للحصول على استجابات في الوقت الفعلي. وفقًا لسياساتهم، لا يتم استخدام بياناتك لتدريب
-          النماذج.
+          We do not collect precise location data, advertising identifiers, or behavioral analytics.
         </p>
 
-        <h2>الاحتفاظ بالبيانات</h2>
+        <h2>How We Use Your Information</h2>
         <ul>
-          <li>يتم الاحتفاظ ببيانات الحساب حتى تقوم بحذف حسابك</li>
-          <li>يتم الاحتفاظ بسجل الدردشة لمدة 30 يومًا أو حتى تحذفه يدويًا</li>
-          <li>قد يتم الاحتفاظ ببيانات الأمان التقنية لفترة وجيزة للحفاظ على سلامة الخدمة</li>
+          <li>Provide, improve, and personalize the Services</li>
+          <li>Authenticate users and secure accounts</li>
+          <li>Maintain app functionality and prevent abuse</li>
+          <li>Comply with legal obligations</li>
+        </ul>
+        <p>We do not sell your data. We do not use your content to train machine-learning models.</p>
+
+        <h2>Data Retention</h2>
+        <ul>
+          <li>Account data is retained until you delete your account</li>
+          <li>Workout history is retained until you delete it manually or close your account</li>
+          <li>Technical security data may be retained briefly to maintain service integrity</li>
         </ul>
 
-        <h2>مشاركة البيانات</h2>
-        <p>قد نشارك البيانات فقط مع:</p>
+        <h2>Data Sharing</h2>
+        <p>We may share data only with:</p>
         <ul>
-          <li>مزودي الخدمات الذين يدعمون وظائف التطبيق (مثل Supabase، OpenAI API)</li>
-          <li>السلطات إذا لزم الأمر للامتثال القانوني أو السلامة</li>
+          <li>
+            Service providers that support app functionality (e.g., Supabase for database hosting)
+          </li>
+          <li>Authorities if required for legal compliance or safety</li>
         </ul>
-        <p>نحن لا نشارك بياناتك الشخصية أبدًا لأغراض إعلانية.</p>
+        <p>We never share your personal data for advertising purposes.</p>
 
-        <h2>الأمان</h2>
-        <p>نستخدم ضمانات معيارية في الصناعة، بما في ذلك:</p>
+        <h2>Security</h2>
+        <p>We use industry-standard safeguards, including:</p>
         <ul>
-          <li>التشفير أثناء النقل (HTTPS)</li>
-          <li>التشفير أثناء الراحة عبر مزودي الخدمة لدينا</li>
+          <li>Encryption in transit (HTTPS)</li>
+          <li>Encryption at rest via our service providers</li>
         </ul>
-        <p>لا يمكن لأي نظام أن يكون آمنًا تمامًا، على الرغم من أننا نعمل بجد لحماية بياناتك.</p>
+        <p>No system can be completely secure, though we work hard to protect your data.</p>
 
-        <h2>خصوصية الأطفال</h2>
-        <p>ديّن أب مخصص للمستخدمين الذين تبلغ أعمارهم 13 عامًا فما فوق.</p>
+        <h2>Children&apos;s Privacy</h2>
+        <p>Defy is intended for users 13 years and older.</p>
         <p>
-          نحن لا نجمع عن قصد بيانات شخصية من الأطفال دون سن 13 عامًا. إذا اكتشفنا مثل هذه البيانات،
-          سنحذفها بسرعة.
+          We do not knowingly collect personal data from children under 13. If we discover such
+          data, we will delete it promptly.
         </p>
 
-        <h2>حقوق البيانات الخاصة بك</h2>
-        <p>يمكنك ممارسة الحقوق التالية:</p>
+        <h2>Your Rights</h2>
         <ul>
-          <li>حذف حسابك (وجميع البيانات المرتبطة به) عبر ميزة الحذف داخل التطبيق</li>
-          <li>طلب المساعدة عن طريق الاتصال بنا إذا لزم الأمر</li>
+          <li>Delete your account (and all associated data) via the in-app delete feature</li>
+          <li>Request assistance by contacting us if needed</li>
         </ul>
         <p>
-          <strong>البريد الإلكتروني:</strong> support@defykegal.com
+          <strong>Email:</strong> support@defykegal.com
         </p>
 
-        <h2>التغييرات على هذه السياسة</h2>
+        <h2>Changes to This Policy</h2>
         <p>
-          قد نقوم بتحديث سياسة الخصوصية هذه حسب الحاجة. الاستمرار في استخدام ديّن أب يعني أنك توافق
-          على السياسة المحدثة.
+          We may update this Privacy Policy as needed. Continued use of Defy means you agree to the
+          updated policy.
         </p>
 
-        <h2>اتصل بنا</h2>
-        <p>إذا كان لديك أي أسئلة، يرجى الاتصال بـ:</p>
-        <p>📩 support@defykegal.com</p>
+        <h2>Contact Us</h2>
+        <p>If you have any questions, please contact:</p>
+        <p>support@defykegal.com</p>
       </div>
     </SectionContainer>
   )

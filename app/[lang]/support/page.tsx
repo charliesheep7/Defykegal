@@ -2,32 +2,32 @@ import { genPageMetadata } from 'app/seo'
 import SectionContainer from '@/components/SectionContainer'
 
 export const metadata = genPageMetadata({
-  title: 'الدعم',
-  description: 'هل تحتاج مساعدة مع Defy؟ تواصل مع الدعم عبر support@defykegal.com.',
-  alternates: ('/support', { currentLanguage: 'ar' }),
+  title: 'Support',
+  description: 'Need help with Defy? Reach out to our support team at support@defykegal.com.',
 })
 
-export default function SupportPageAr() {
+export default function SupportPage() {
   return (
     <SectionContainer>
-      <div className="prose dark:prose-invert max-w-none py-8" dir="rtl">
-        <h1>الدعم</h1>
-        <p>إذا كنت تحتاج مساعدة في الحساب أو الدفع أو مشاكل التطبيق، تواصل معنا عبر البريد.</p>
-
-        <h2>التواصل</h2>
+      <div className="prose dark:prose-invert max-w-none py-8">
+        <h1>Support</h1>
         <p>
-          <strong>البريد الإلكتروني:</strong>{' '}
-          <a href="mailto:support@defykegal.com" dir="ltr">
-            support@defykegal.com
-          </a>
+          If you need help with your account, billing, or any issue in the app, reach out to us by
+          email and we&apos;ll get back to you as soon as possible.
         </p>
 
-        <h2>ماذا ترسل في الرسالة</h2>
+        <h2>Contact</h2>
+        <p>
+          <strong>Email:</strong>{' '}
+          <a href="mailto:support@defykegal.com">support@defykegal.com</a>
+        </p>
+
+        <h2>What to Include</h2>
         <ul>
-          <li>البريد الإلكتروني المرتبط بحسابك</li>
-          <li>وصف مختصر للمشكلة</li>
-          <li>صور للشاشة (إن وجدت)</li>
-          <li>نوع الجهاز وإصدار التطبيق (إن توفر)</li>
+          <li>The email address linked to your account</li>
+          <li>A brief description of the issue</li>
+          <li>Screenshots if applicable</li>
+          <li>Your device type and app version (if available)</li>
         </ul>
       </div>
     </SectionContainer>

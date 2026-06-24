@@ -13,7 +13,6 @@ import PostBanner from '@/layouts/PostBanner'
 import { Metadata } from 'next'
 import siteMetadata from '@/data/siteMetadata'
 import { notFound } from 'next/navigation'
-import {  } from 'app/seo'
 
 const defaultLayout = 'PostLayout'
 const layouts = {
@@ -66,7 +65,7 @@ const buildJsonLdAuthors = (authorDetails: ReturnType<typeof resolveAuthorDetail
 }
 
 export async function generateMetadata(props: {
-  params: Promise<{ slug: string[]; lang: 'ar' }>
+  params: Promise<{ slug: string[]; lang: 'en' }>
 }): Promise<Metadata | undefined> {
   const params = await props.params
   const slug = decodeURI(params.slug.join('/'))
@@ -92,19 +91,9 @@ export async function generateMetadata(props: {
     }
   })
 
-  // Check if this post has an English version
-  const hasEnglishVersion = allBlogs.some(
-    (p) => p.slug === post.slug && (p.lang === 'en' || !p.lang)
-  )
-
-  const alternates = hasEnglishVersion
-    ? (`/blog/${post.slug}`, { currentLanguage: 'ar' })
-    : undefined
-
   return {
     title: post.title,
     description: post.summary,
-    alternates,
     openGraph: {
       title: post.title,
       description: post.summary,
@@ -126,21 +115,20 @@ export async function generateMetadata(props: {
 }
 
 export const generateStaticParams = async () => {
-  // Generate params for Arabic posts only
-  const arabicBlogs = allBlogs.filter((p) => p.lang === 'ar')
-  return arabicBlogs.map((p) => ({
-    lang: 'ar' as const,
+  const englishBlogs = allBlogs.filter((p) => p.lang === 'en' || !p.lang)
+  return englishBlogs.map((p) => ({
+    lang: 'en' as const,
     slug: p.slug.split('/').map((name) => decodeURI(name)),
   }))
 }
 
-export default async function Page(props: { params: Promise<{ slug: string[]; lang: 'ar' }> }) {
+export default async function Page(props: { params: Promise<{ slug: string[]; lang: 'en' }> }) {
   const params = await props.params
   const slug = decodeURI(params.slug.join('/'))
   const { lang } = params
 
   // Filter blogs by language
-  const filteredBlogs = allBlogs.filter((post) => post.lang === lang)
+  const filteredBlogs = allBlogs.filter((post) => post.lang === lang || (!post.lang && lang === 'en'))
   const sortedCoreContents = allCoreContent(sortPosts(filteredBlogs))
   const postIndex = sortedCoreContents.findIndex((p) => p.slug === slug)
 

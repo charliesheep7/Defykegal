@@ -2,185 +2,135 @@ import { genPageMetadata } from 'app/seo'
 import SectionContainer from '@/components/SectionContainer'
 
 export const metadata = genPageMetadata({
-  title: 'شروط الخدمة',
+  title: 'Terms of Service',
   description:
-    'اقرأ القواعد وإرشادات الاستخدام المقبول والشروط القانونية التي تحكم استخدامك لتطبيق ديّن أب.',
-  alternates: ('/terms', { currentLanguage: 'ar' }),
+    'Read the rules, acceptable-use guidelines, and legal terms that govern your use of the Defy app.',
 })
 
-export default function TermsPageAr() {
+export default function TermsPage() {
   return (
     <SectionContainer>
-      <div className="prose dark:prose-invert max-w-none py-8" dir="rtl">
-        <h1>شروط الخدمة</h1>
+      <div className="prose dark:prose-invert max-w-none py-8">
+        <h1>Terms of Service</h1>
         <p>
-          <strong>آخر تحديث: [25 أكتوبر 2025]</strong>
+          <strong>Last updated: October 25, 2025</strong>
         </p>
         <p>
-          مرحبًا بك في ديّن أب. يرجى قراءة شروط الخدمة هذه ("الشروط") بعناية. من خلال الوصول إلى أو
-          استخدام تطبيق الهاتف المحمول لـ ديّن أب أو الخدمات ذات الصلة ("الخدمات")، فإنك توافق على
-          الالتزام بهذه الشروط. إذا كنت لا توافق، يرجى التوقف عن استخدام الخدمات.
-        </p>
-
-        <h2>1. الأهلية</h2>
-        <p>
-          يجب أن يكون عمرك 13 عامًا على الأقل لاستخدام الخدمات. أنت مسؤول عن جميع الأنشطة التي تحدث
-          ضمن حسابك.
+          Welcome to Defy. Please read these Terms of Service (&quot;Terms&quot;) carefully. By
+          accessing or using the Defy mobile application or related services (&quot;Services&quot;),
+          you agree to be bound by these Terms. If you do not agree, please stop using the Services.
         </p>
 
-        <h2>2. حسابك</h2>
+        <h2>1. Eligibility</h2>
         <p>
-          يمكنك تسجيل الدخول باستخدام البريد الإلكتروني أو Apple أو Google. أنت مسؤول عن الحفاظ على
-          سرية معلومات تسجيل الدخول الخاصة بك. أخطرنا على الفور على support@defykegal.com إذا كنت
-          تعتقد أن حسابك قد تم اختراقه.
+          You must be at least 13 years old to use the Services. You are responsible for all
+          activity that occurs under your account.
         </p>
-        <p>قد نعلق أو نلغي حسابك إذا انتهكت هذه الشروط أو انخرطت في سلوك ضار.</p>
 
-        <h2>3. ترخيص استخدام الخدمات</h2>
+        <h2>2. Your Account</h2>
         <p>
-          نمنحك ترخيصًا شخصيًا ومحدودًا وغير حصري وغير قابل للتحويل وقابل للإلغاء لاستخدام الخدمات
-          للأغراض الشخصية وغير التجارية. جميع الحقوق غير الممنوحة صراحة محفوظة لـ ديّن أب.
+          You may sign in using email, Apple, or Google. You are responsible for keeping your login
+          credentials confidential. Notify us immediately at support@defykegal.com if you believe
+          your account has been compromised.
         </p>
-        <p>لا يجوز لك نسخ أو تعديل أو توزيع أو بيع أو تأجير أي جزء من الخدمات.</p>
+        <p>We may suspend or terminate your account if you violate these Terms.</p>
 
-        <h2>4. السلوك المحظور</h2>
-        <p>أنت توافق على عدم:</p>
+        <h2>3. License to Use the Services</h2>
+        <p>
+          We grant you a personal, limited, non-exclusive, non-transferable, revocable license to
+          use the Services for personal, non-commercial purposes. All rights not expressly granted
+          are reserved by Defy.
+        </p>
+        <p>You may not copy, modify, distribute, sell, or lease any part of the Services.</p>
+
+        <h2>4. Prohibited Conduct</h2>
+        <p>You agree not to:</p>
         <ul>
-          <li>استخدام الخدمات لأغراض غير قانونية</li>
-          <li>
-            مضايقة أو ترهيب أو استهداف الآخرين بناءً على الدين أو العرق أو الجنس أو الخصائص المحمية
-            الأخرى
-          </li>
-          <li>
-            تحميل أو نقل محتوى ضار أو تشهيري أو مهدد أو يحض على الكراهية أو عنيف أو جنسي صريح أو
-            يروج لإيذاء النفس أو الإرهاب
-          </li>
-          <li>التدخل في سلامة النظام أو أمنه أو تعطيلها</li>
-          <li>محاولة الهندسة العكسية أو استخراج الكود المصدري</li>
-          <li>استخدام الخدمات لنشر معلومات مضللة مقدمة كفتاوى دينية موثوقة</li>
+          <li>Use the Services for any unlawful purpose</li>
+          <li>Interfere with or disrupt system integrity or security</li>
+          <li>Attempt to reverse-engineer or extract source code</li>
+          <li>Upload or transmit harmful, defamatory, or threatening content</li>
         </ul>
-        <p>قد نقيد أو نزيل المحتوى أو الحسابات لحماية المستخدمين والحفاظ على هذه المعايير.</p>
-
-        <h2>5. المحتوى الديني الحساس والاحترام</h2>
         <p>
-          يتضمن ديّن أب موضوعات دينية قد يجدها بعض المستخدمين حساسة. أنت توافق على المشاركة باحترام
-          وعدم استخدام الخدمات لمهاجمة معتقدات الآخرين أو إثارة العداء أو تعزيز الصراع الطائفي.
+          We may restrict or remove content or accounts to protect users and maintain these
+          standards.
         </p>
 
-        <h2>6. محتوى المستخدم والإشراف</h2>
+        <h2>5. Health Disclaimer</h2>
         <p>
-          إذا قمت بإرسال محتوى (على سبيل المثال، الرسائل أو نص المذكرات)، فإنك تمنح ديّن أب ترخيصًا
-          عالميًا غير حصري وخاليًا من حقوق الملكية لاستضافته ومعالجته فقط لتوفير وتحسين الخدمات.
+          Defy provides guided kegel exercise programs for informational and fitness purposes only.
+          Nothing in the Services constitutes medical advice. Consult a qualified healthcare
+          professional before starting any exercise program, especially if you have a medical
+          condition.
+        </p>
+        <p>You use the Services at your own risk.</p>
+
+        <h2>6. Subscriptions &amp; Payments</h2>
+        <p>
+          Some features require a paid subscription. Payments, billing, and refunds are handled by
+          the Apple App Store or Google Play.
+        </p>
+        <p>Defy does not collect or store your full payment card information.</p>
+        <p>You may manage your subscription through your platform account settings.</p>
+
+        <h2>7. Intellectual Property</h2>
+        <p>
+          Defy, including its name, logo, design, software, and content, is owned by Defy or its
+          licensors and protected under intellectual property laws.
         </p>
         <p>
-          قد نراجع أو نزيل أو نقيد المحتوى الذي ينتهك هذه الشروط أو المتطلبات القانونية. يمكنك
-          الإبلاغ عن المخاوف على support@defykegal.com.
+          If you believe content infringes your rights, contact support@defykegal.com and we will
+          review promptly.
         </p>
 
-        <h2>7. المحتوى المولد بالذكاء الاصطناعي وعدم تقديم المشورة المهنية</h2>
+        <h2>8. Disclaimer of Warranties</h2>
         <p>
-          قد تولد الخدمات استجابات باستخدام الذكاء الاصطناعي. قد يكون محتوى الذكاء الاصطناعي غير
-          صحيح أو غير كامل أو قديم. يتم تقديمه للأغراض التعليمية والدعم الروحي فقط.
-        </p>
-        <p>
-          لا يشكل أي شيء في الخدمات فتاوى دينية أو استشارات أو مشورة قانونية أو طبية أو مهنية أخرى.
-          استشر دائمًا العلماء المؤهلين أو المتخصصين للمسائل الخطيرة.
-        </p>
-        <p>أنت تستخدم الاستجابات المولدة بالذكاء الاصطناعي وفقًا لتقديرك ومخاطرك الخاصة.</p>
-
-        <h2>8. عدم ضمان الدقة</h2>
-        <p>
-          قد تأتي الكتاب المقدس والترجمات والمحتوى المرجعي من مصادر خارجية. نحن لا نضمن الدقة أو
-          الموثوقية أو التوفر أو الاكتمال.
-        </p>
-        <p>استخدام هذه المعلومات على مسؤوليتك الخاصة.</p>
-
-        <h2>9. الخصوصية</h2>
-        <p>
-          استخدامك للخدمات يخضع لسياسة الخصوصية الخاصة بنا، والتي توضح كيفية جمع بياناتك وتخزينها
-          واستخدامها.
+          The Services are provided &quot;as is&quot; and &quot;as available&quot; without any
+          warranties, express or implied, including merchantability, fitness for a particular
+          purpose, or non-infringement.
         </p>
 
-        <h2>10. الاشتراكات والمدفوعات</h2>
-        <p>
-          تتطلب بعض الميزات اشتراكًا مدفوعًا. يتم التعامل مع المدفوعات والفواتير والمبالغ المستردة
-          من قبل Apple App Store أو Google Play.
-        </p>
-        <p>لا يجمع ديّن أب أو يخزن معلومات بطاقة الدفع الكاملة الخاصة بك.</p>
-        <p>يمكنك إدارة اشتراكك من خلال إعدادات حساب النظام الأساسي الخاص بك.</p>
-
-        <h2>11. خدمات الطرف الثالث</h2>
-        <p>
-          نعتمد على مزودين موثوقين مثل خدمات المصادقة والاستضافة ومعالجة الذكاء الاصطناعي. بينما
-          نحرص على اختيارهم، نحن لا نتحكم في أفعالهم ولسنا مسؤولين عن الإخفاقات الناجمة عن أطراف
-          ثالثة.
-        </p>
-
-        <h2>12. الملكية الفكرية</h2>
-        <p>
-          ديّن أب، بما في ذلك اسمه وشعاره وتصميمه وبرامجه ومحتواه، مملوك لـ ديّن أب أو مرخصيه ومحمي
-          بموجب قوانين الملكية الفكرية.
-        </p>
-        <p>إذا كنت تعتقد أن المحتوى ينتهك حقوقك، اتصل بـ support@defykegal.com وسنراجع على الفور.</p>
-
-        <h2>13. تدابير السلامة والإنفاذ</h2>
-        <p>
-          قد نستخدم أدوات آلية ويدوية للحد من السلوك الضار والمعلومات المضللة وإساءة الاستخدام. قد
-          نتخذ إجراءات، بما في ذلك قيود الميزات أو إلغاء الحساب، لحماية المستخدمين والامتثال
-          للقانون.
-        </p>
-
-        <h2>14. إخلاء المسؤولية</h2>
-        <p>
-          يتم تقديم الخدمات "كما هي" و "حسب التوفر" دون أي ضمانات، سواء كانت ضمنية أو صريحة، بما في
-          ذلك القابلية للتسويق أو الملاءمة لغرض معين أو عدم الانتهاك.
-        </p>
-        <p>استخدام الخدمات على مسؤوليتك الخاصة.</p>
-
-        <h2>15. تحديد المسؤولية</h2>
-        <p>إلى أقصى حد يسمح به القانون:</p>
+        <h2>9. Limitation of Liability</h2>
+        <p>To the maximum extent permitted by law:</p>
         <ul>
           <li>
-            ديّن أب ليس مسؤولاً عن الأضرار غير المباشرة أو العرضية أو الخاصة أو التبعية أو العقابية
+            Defy is not liable for indirect, incidental, special, consequential, or punitive damages
           </li>
+          <li>Defy is not liable for loss of data, profits, or reputational harm</li>
           <li>
-            ديّن أب ليس مسؤولاً عن فقدان البيانات أو الأرباح أو الضرر العاطفي أو الضرر بالسمعة
-          </li>
-          <li>
-            لن تتجاوز مسؤوليتنا الإجمالية عن أي مطالبة: الأكبر من 50 دولارًا أمريكيًا أو المبلغ الذي
-            دفعته لـ ديّن أب في الـ 12 شهرًا قبل الحدث.
+            Our total liability for any claim will not exceed the greater of $50 USD or the amount
+            you paid to Defy in the 12 months before the event
           </li>
         </ul>
 
-        <h2>16. التعويض</h2>
+        <h2>10. Indemnification</h2>
         <p>
-          أنت توافق على الدفاع عن وتعويض ديّن أب وفريقه عن أي مطالبات أو أضرار أو نفقات ناشئة عن
-          استخدامك للخدمات أو انتهاكك لهذه الشروط.
+          You agree to defend and indemnify Defy and its team from any claims or damages arising
+          from your use of the Services or violation of these Terms.
         </p>
 
-        <h2>17. الإنهاء</h2>
-        <p>يمكنك حذف حسابك في أي وقت في التطبيق.</p>
-        <p>قد نعلق أو نلغي الوصول للانتهاكات أو لأسباب قانونية.</p>
-        <p>تبقى الأقسام مثل إخلاء المسؤولية والقيود والملكية الفكرية سارية بعد الإنهاء.</p>
-
-        <h2>18. التغييرات على الشروط</h2>
+        <h2>11. Termination</h2>
+        <p>You may delete your account at any time from within the app.</p>
+        <p>We may suspend or terminate access for violations or legal reasons.</p>
         <p>
-          قد نقوم بتحديث هذه الشروط من وقت لآخر. تصبح التحديثات سارية عند نشرها. الاستمرار في
-          استخدام الخدمات يعني أنك توافق على الشروط المعدلة.
+          Sections such as Disclaimer, Limitations, and Intellectual Property survive termination.
         </p>
 
-        <h2>19. الامتثال للتصدير والعقوبات</h2>
-        <p>لا يجوز لك استخدام الخدمات في انتهاك لقوانين مراقبة الصادرات أو العقوبات.</p>
-
-        <h2>20. الاتفاقية الكاملة</h2>
+        <h2>12. Changes to Terms</h2>
         <p>
-          تشكل هذه الشروط الاتفاقية الكاملة بينك وبين ديّن أب فيما يتعلق بالخدمات. إذا تبين أن أي
-          جزء غير قابل للتنفيذ، فإن الأجزاء المتبقية لا تزال سارية.
+          We may update these Terms from time to time. Updates take effect upon posting. Continued
+          use of the Services means you agree to the revised Terms.
         </p>
 
-        <h2>21. اتصل بنا</h2>
-        <p>إذا كان لديك أسئلة أو مخاوف أو شكاوى، اتصل بـ:</p>
-        <p>📩 support@defykegal.com</p>
+        <h2>13. Entire Agreement</h2>
+        <p>
+          These Terms constitute the entire agreement between you and Defy regarding the Services.
+          If any part is unenforceable, the remaining parts remain in effect.
+        </p>
+
+        <h2>14. Contact Us</h2>
+        <p>If you have questions, concerns, or complaints, contact:</p>
+        <p>support@defykegal.com</p>
       </div>
     </SectionContainer>
   )

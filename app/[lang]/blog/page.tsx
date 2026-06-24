@@ -6,18 +6,16 @@ import ListLayout from '@/layouts/ListLayout'
 const POSTS_PER_PAGE = 5
 
 export function generateStaticParams() {
-  return [{ lang: 'ar' }]
+  return [{ lang: 'en' }]
 }
 
 export const metadata = genPageMetadata({
-  title: 'المدونة',
-  description: 'إرشادات، تأملات، وتحديثات من فريق ديّن أب لدعم عباداتك اليومية.',
-  alternates: ('/blog', { currentLanguage: 'ar' }),
+  title: 'Blog',
+  description: 'Tips, guides, and updates from the Defy team on kegel exercises for men.',
 })
 
-export default async function LocaleBlogPage({ params }: { params: Promise<{ lang: 'ar' }> }) {
+export default async function LocaleBlogPage({ params }: { params: Promise<{ lang: 'en' }> }) {
   const { lang } = await params
-  // Filter posts by the specified language
   const filteredBlogs = allBlogs.filter((post) => post.lang === lang)
   const posts = allCoreContent(sortPosts(filteredBlogs))
   const pageNumber = 1

@@ -9,23 +9,21 @@ import { notFound } from 'next/navigation'
 const POSTS_PER_PAGE = 5
 
 export async function generateMetadata(props: {
-  params: Promise<{ tag: string; lang: 'ar' }>
+  params: Promise<{ tag: string; lang: 'en' }>
 }): Promise<Metadata> {
   const params = await props.params
   const tag = decodeURI(params.tag)
   return genPageMetadata({
     title: tag,
-    description: `اقرأ مقالات عن ${tag} على Defy — معرفة إسلامية موثوقة ومعتمدة من العلماء في جرعات قصيرة لتنمية دينك مع كل تمريرة.`,
-    alternates: (`/tags/${tag}`, { currentLanguage: 'ar' }),
+    description: `Read articles about ${tag} on the Defy blog — kegel exercise tips, guides, and men's pelvic floor health.`,
   })
 }
 
 export const generateStaticParams = async () => {
   const tagCounts = {} as Record<string, number>
 
-  // Get tags from Arabic posts only
-  const arabicBlogs = allBlogs.filter((post) => post.lang === 'ar')
-  arabicBlogs.forEach((post) => {
+  const englishBlogs = allBlogs.filter((post) => post.lang === 'en' || !post.lang)
+  englishBlogs.forEach((post) => {
     if (post.tags && post.draft !== true) {
       post.tags.forEach((tag) => {
         const formattedTag = slug(tag)
@@ -34,27 +32,26 @@ export const generateStaticParams = async () => {
     }
   })
 
-  return Object.keys(tagCounts).map((tag) => ({ tag, lang: 'ar' as const }))
+  return Object.keys(tagCounts).map((tag) => ({ tag, lang: 'en' as const }))
 }
 
 export default async function LocaleTagPage(props: {
-  params: Promise<{ tag: string; lang: 'ar' }>
+  params: Promise<{ tag: string; lang: 'en' }>
 }) {
   const params = await props.params
   const tag = decodeURI(params.tag)
   const { lang } = params
 
-  // Filter Arabic posts by tag
-  const arabicBlogs = allBlogs.filter((post) => post.lang === lang)
-  const filteredPosts = arabicBlogs.filter(
+  const filteredBlogs = allBlogs.filter((post) => post.lang === lang || (!post.lang && lang === 'en'))
+  const taggedPosts = filteredBlogs.filter(
     (post) => post.tags && post.tags.map((t) => slug(t)).includes(tag)
   )
 
-  if (filteredPosts.length === 0) {
+  if (taggedPosts.length === 0) {
     return notFound()
   }
 
-  const posts = allCoreContent(sortPosts(filteredPosts))
+  const posts = allCoreContent(sortPosts(taggedPosts))
   const pageNumber = 1
   const initialDisplayPosts = posts.slice(0, POSTS_PER_PAGE * pageNumber)
   const pagination = {
