@@ -4,7 +4,7 @@ import 'katex/dist/katex.css'
 import PageTitle from '@/components/PageTitle'
 import { components } from '@/components/MDXComponents'
 import { MDXLayoutRenderer } from 'pliny/mdx-components'
-import { sortPosts, coreContent, allCoreContent } from 'pliny/utils/contentlayer'
+import { sortPosts, coreContent, allCoreContent, CoreContent } from 'pliny/utils/contentlayer'
 import { allBlogs, allAuthors } from 'contentlayer/generated'
 import type { Authors, Blog } from 'contentlayer/generated'
 import PostSimple from '@/layouts/PostSimple'
@@ -218,7 +218,7 @@ export default async function Page(props: { params: Promise<{ slug: string[] }> 
         name: post.title,
         description: post.summary,
         datePublished: new Date(post.date).toISOString(),
-        dateModified: new Date((post as any).lastmod || post.date).toISOString(),
+        dateModified: new Date(extendedPost.lastmod || post.date).toISOString(),
         lastReviewed: lastReviewed ? new Date(lastReviewed).toISOString() : undefined,
         author: buildJsonLdAuthors(authorDetails),
         reviewedBy: buildReviewerJsonLd(reviewerDetails),

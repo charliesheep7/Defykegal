@@ -100,7 +100,7 @@ function MedicalReviewerCard({ author }: { author: Authors }) {
           <div className="prose dark:prose-invert mt-4 max-w-none text-sm">
             <MDXLayoutRenderer code={author.body.code} />
           </div>
-          {sameAs.length > 0 && (
+          {(content.linkedin || content.doximity || content.healthgrades) && (
             <div className="mt-4 flex flex-wrap gap-3">
               {content.linkedin && (
                 <Link

@@ -14,7 +14,7 @@ const compat = new FlatCompat({
 
 export default [
   {
-    ignores: ['.claude/**'],
+    ignores: ['.claude/**', 'scripts/**'],
   },
   js.configs.recommended,
   ...compat.extends(

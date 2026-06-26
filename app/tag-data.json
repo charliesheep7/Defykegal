@@ -1,12 +1,7 @@
 {
-  "premature-ejaculation": 1,
-  "pelvic-floor": 5,
-  "sexual-health": 4,
-  "performance": 1,
-  "mens-health": 6,
-  "erectile-dysfunction": 3,
-  "testosterone": 1,
-  "urinary-health": 4,
-  "overactive-bladder": 1,
-  "pelvic-pain": 1
+  "pelvic-floor": 1,
+  "erectile-dysfunction": 1,
+  "mens-health": 1,
+  "urinary-health": 1,
+  "sexual-health": 1
 }

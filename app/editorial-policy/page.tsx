@@ -44,12 +44,12 @@ export default function EditorialPolicyPage() {
             <strong>Medical Reviewers:</strong> Every article is reviewed by a licensed physician
             with relevant specialty credentials before publication. Our current medical reviewer is{' '}
             <Link href="/about#dr-marcus-webb" className="text-accent-400 hover:text-accent-300">
-              Dr. Marcus Webb, MD, FACS
+              Dr. Lu, MD
             </Link>
-            , a board-certified urologist with over 15 years of experience in male pelvic floor
-            rehabilitation and erectile dysfunction. Reviewers check clinical accuracy, verify
-            research citations, and flag any content that contradicts established urological
-            guidelines.
+            , an Associate Chief Physician and Director of Health Examination with nearly 20 years
+            of clinical experience in chronic disease prevention and integrated medicine. Reviewers
+            check clinical accuracy, verify research citations, and flag any content that
+            contradicts established medical guidelines.
           </p>
         </section>
 
