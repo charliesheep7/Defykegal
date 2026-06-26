@@ -10,6 +10,13 @@ import siteMetadata from '@/data/siteMetadata'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 import FAQ from '@/components/FAQ'
 import Share from '@/components/Share'
+import MedicalReviewBanner from '@/components/MedicalReviewBanner'
+import MedicalDisclaimer from '@/components/MedicalDisclaimer'
+
+type MedicalAuthor = CoreContent<Authors> & {
+  honorificSuffix?: string
+  medicalSpecialty?: string
+}
 
 const editUrl = (path) => `${siteMetadata.siteRepo}/blob/main/data/${path}`
 const discussUrl = (path) =>
@@ -25,13 +32,22 @@ const postDateTemplate: Intl.DateTimeFormatOptions = {
 interface LayoutProps {
   content: CoreContent<Blog>
   authorDetails: CoreContent<Authors>[]
+  reviewerDetails?: CoreContent<Authors> | null
   next?: { path: string; title: string }
   prev?: { path: string; title: string }
   children: ReactNode
 }
 
-export default function PostLayout({ content, authorDetails, next, prev, children }: LayoutProps) {
-  const { filePath, path, slug, date, title, tags, faqs, summary, lang } = content
+export default function PostLayout({
+  content,
+  authorDetails,
+  reviewerDetails,
+  next,
+  prev,
+  children,
+}: LayoutProps) {
+  const { filePath, path, slug, date, title, tags, faqs, summary, lang, lastReviewed } =
+    content as CoreContent<Blog> & { lastReviewed?: string }
   const basePath = path.split('/')[0]
   const isArabic = lang === 'ar'
 
@@ -99,8 +115,23 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
             <div className="divide-y divide-gray-200 xl:col-span-3 xl:row-span-2 xl:pb-0 dark:divide-gray-700">
               <div className="prose dark:prose-invert max-w-none pt-10 pb-8">
                 <Share title={title} slug={slug} summary={summary} />
+                {reviewerDetails && lastReviewed && (
+                  <MedicalReviewBanner
+                    reviewer={{
+                      name: reviewerDetails.name,
+                      honorificSuffix: (reviewerDetails as MedicalAuthor).honorificSuffix,
+                      occupation: reviewerDetails.occupation,
+                      medicalSpecialty: (reviewerDetails as MedicalAuthor).medicalSpecialty,
+                      avatar: reviewerDetails.avatar,
+                      linkedin: reviewerDetails.linkedin,
+                      slug: reviewerDetails.slug,
+                    }}
+                    lastReviewed={lastReviewed}
+                  />
+                )}
                 {children}
                 {faqs && <FAQ faqs={faqs} />}
+                {reviewerDetails && <MedicalDisclaimer />}
               </div>
               <div className="pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300">
                 <Link href={discussUrl(path)} rel="nofollow">

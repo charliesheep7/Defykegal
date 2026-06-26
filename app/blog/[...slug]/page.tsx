@@ -14,6 +14,22 @@ import { Metadata } from 'next'
 import siteMetadata from '@/data/siteMetadata'
 import { notFound } from 'next/navigation'
 
+type ExtendedBlog = Blog & {
+  reviewedBy?: string
+  lastReviewed?: string
+  lastmod?: string
+}
+
+type MedicalAuthor = CoreContent<Authors> & {
+  honorificSuffix?: string
+  medicalSpecialty?: string
+  hospitalAffiliation?: string
+  boardCertification?: string
+  doximity?: string
+  healthgrades?: string
+  pubmed?: string
+}
+
 const defaultLayout = 'PostLayout'
 const layouts = {
   PostSimple,
@@ -113,6 +129,41 @@ export const generateStaticParams = async () => {
   return englishBlogs.map((p) => ({ slug: p.slug.split('/').map((name) => decodeURI(name)) }))
 }
 
+const buildReviewerJsonLd = (reviewer: MedicalAuthor) => {
+  const sameAs = [
+    reviewer.linkedin,
+    reviewer.doximity,
+    reviewer.healthgrades,
+    reviewer.pubmed,
+    ...(reviewer.seoProfiles || []),
+  ].filter(Boolean)
+
+  return {
+    '@type': ['Person', 'Physician'],
+    '@id': `${siteMetadata.siteUrl}/about#${reviewer.slug}`,
+    name: reviewer.name,
+    honorificSuffix: reviewer.honorificSuffix || undefined,
+    jobTitle: reviewer.occupation || undefined,
+    medicalSpecialty: reviewer.medicalSpecialty || undefined,
+    image: reviewer.avatar ? `${siteMetadata.siteUrl}${reviewer.avatar}` : undefined,
+    worksFor: reviewer.hospitalAffiliation
+      ? { '@type': 'MedicalOrganization', name: reviewer.hospitalAffiliation }
+      : undefined,
+    hasCredential: reviewer.boardCertification
+      ? {
+          '@type': 'EducationalOccupationalCredential',
+          credentialCategory: 'Board Certification',
+          recognizedBy: {
+            '@type': 'Organization',
+            name: reviewer.boardCertification,
+          },
+        }
+      : undefined,
+    url: `${siteMetadata.siteUrl}/about#${reviewer.slug}`,
+    sameAs: sameAs.length > 0 ? Array.from(new Set(sameAs)) : undefined,
+  }
+}
+
 export default async function Page(props: { params: Promise<{ slug: string[] }> }) {
   const params = await props.params
   const slug = decodeURI(params.slug.join('/'))
@@ -130,9 +181,21 @@ export default async function Page(props: { params: Promise<{ slug: string[] }> 
   const next = postIndex !== -1 ? sortedPosts[postIndex - 1] : null
 
   const authorDetails = resolveAuthorDetails(post.authors)
+
+  // Resolve medical reviewer
+  const extendedPost = post as ExtendedBlog
+  const reviewerSlug = extendedPost.reviewedBy
+  const reviewerAuthor = reviewerSlug
+    ? allAuthors.find((a) => a.slug === reviewerSlug) || null
+    : null
+  const reviewerDetails = reviewerAuthor ? (coreContent(reviewerAuthor) as MedicalAuthor) : null
+
   const mainContent = coreContent(post)
 
   const postUrl = `${siteMetadata.siteUrl}/blog/${post.slug}`
+  const lastReviewed = extendedPost.lastReviewed
+
+  // Base Article JSON-LD
   const jsonLd = post.structuredData || {}
   jsonLd['author'] = buildJsonLdAuthors(authorDetails)
   jsonLd['publisher'] = {
@@ -144,6 +207,31 @@ export default async function Page(props: { params: Promise<{ slug: string[] }> 
     },
   }
   jsonLd['mainEntityOfPage'] = { '@type': 'WebPage', '@id': postUrl }
+
+  // MedicalWebPage JSON-LD (added when post has a medical reviewer)
+  const medicalWebPageLd = reviewerDetails
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'MedicalWebPage',
+        '@id': `${postUrl}#medicalwebpage`,
+        url: postUrl,
+        name: post.title,
+        description: post.summary,
+        datePublished: new Date(post.date).toISOString(),
+        dateModified: new Date((post as any).lastmod || post.date).toISOString(),
+        lastReviewed: lastReviewed ? new Date(lastReviewed).toISOString() : undefined,
+        author: buildJsonLdAuthors(authorDetails),
+        reviewedBy: buildReviewerJsonLd(reviewerDetails),
+        audience: {
+          '@type': 'MedicalAudience',
+          audienceType: 'Patient',
+        },
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['h1', '.article-summary'],
+        },
+      }
+    : null
 
   const breadcrumbLd = {
     '@context': 'https://schema.org',
@@ -163,11 +251,23 @@ export default async function Page(props: { params: Promise<{ slug: string[] }> 
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      {medicalWebPageLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalWebPageLd) }}
+        />
+      )}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
       />
-      <Layout content={mainContent} authorDetails={authorDetails} next={next} prev={prev}>
+      <Layout
+        content={mainContent}
+        authorDetails={authorDetails}
+        reviewerDetails={reviewerDetails}
+        next={next}
+        prev={prev}
+      >
         <MDXLayoutRenderer code={post.body.code} components={components} toc={post.toc} />
       </Layout>
     </>

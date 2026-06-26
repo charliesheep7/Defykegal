@@ -119,6 +119,8 @@ export const Blog = defineDocumentType(() => ({
     bibliography: { type: 'string' },
     canonicalUrl: { type: 'string' },
     faqs: { type: 'json' },
+    reviewedBy: { type: 'string' },
+    lastReviewed: { type: 'date' },
   },
   computedFields: {
     ...computedFields,
@@ -164,6 +166,14 @@ export const Authors = defineDocumentType(() => ({
     github: { type: 'string' },
     seoProfiles: { type: 'list', of: { type: 'string' }, default: [] },
     layout: { type: 'string' },
+    // Medical author fields
+    honorificSuffix: { type: 'string' },
+    medicalSpecialty: { type: 'string' },
+    boardCertification: { type: 'string' },
+    hospitalAffiliation: { type: 'string' },
+    doximity: { type: 'string' },
+    healthgrades: { type: 'string' },
+    pubmed: { type: 'string' },
   },
   computedFields,
 }))
