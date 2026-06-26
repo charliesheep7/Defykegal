@@ -13,12 +13,12 @@ const AppDownloadCTA = ({
   blurb = 'Defy delivers guided kegel workouts proven to improve erections, beat ED, and strengthen your pelvic floor — in minutes a day. Free to start.',
   placement,
 }: AppDownloadCTAProps) => (
-  <div className="not-prose border-primary-200 bg-primary-50 dark:border-primary-800 dark:bg-primary-900/20 my-8 rounded-xl border p-6">
-    <h3 className="text-primary-700 dark:text-primary-300 mb-2 text-lg font-semibold">{title}</h3>
-    <p className="mb-4 text-gray-600 dark:text-gray-400">{blurb}</p>
+  <div className="not-prose my-8 rounded-xl border border-gray-700 bg-gray-900 p-6">
+    <h3 className="mb-2 text-lg font-semibold text-gray-100">{title}</h3>
+    <p className="mb-4 text-gray-400">{blurb}</p>
     <Link
       href={IOS_APP_URL}
-      className="bg-primary-600 hover:bg-primary-700 dark:bg-primary-500 dark:hover:bg-primary-600 inline-block rounded-lg px-5 py-2.5 text-sm font-medium text-white"
+      className="inline-block rounded-lg bg-white px-5 py-2.5 text-sm font-medium text-gray-950 transition-colors hover:bg-gray-100"
     >
       Download Defy on iOS
     </Link>
