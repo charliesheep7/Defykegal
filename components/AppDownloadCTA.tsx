@@ -18,7 +18,7 @@ const AppDownloadCTA = ({
     <p className="mb-4 text-gray-400">{blurb}</p>
     <Link
       href={IOS_APP_URL}
-      className="inline-block rounded-lg bg-white px-5 py-2.5 text-sm font-medium text-gray-950 transition-colors hover:bg-gray-100"
+      className="inline-block rounded-lg bg-white px-5 py-2.5 text-sm font-medium text-gray-900 transition-colors hover:bg-gray-100"
     >
       Download Defy on iOS
     </Link>
