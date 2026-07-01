@@ -24,7 +24,7 @@ export default function EditorialPolicyPage() {
             guidelines, and expert consensus — not anecdote.
           </p>
           <p>
-            Every article on defykegal.com is written by a health-experienced writer and
+            Every article on defykegel.com is written by a health-experienced writer and
             independently reviewed by a board-certified urologist before publication. We do not
             publish AI-generated content as-is; all content is written by humans, reviewed by a
             licensed medical professional, and fact-checked against authoritative sources.
@@ -145,7 +145,7 @@ export default function EditorialPolicyPage() {
           <h2>AI Content Policy</h2>
           <p>
             We do not publish health content generated solely by AI tools. All health articles on
-            defykegal.com are written by human writers, reviewed by licensed physicians, and
+            defykegel.com are written by human writers, reviewed by licensed physicians, and
             fact-checked against primary sources before publication. AI tools may be used for
             research assistance, but never as a substitute for human clinical judgment.
           </p>

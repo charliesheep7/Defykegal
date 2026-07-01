@@ -30,7 +30,7 @@ export default function TermsPage() {
         <h2>2. Your Account</h2>
         <p>
           You may sign in using email, Apple, or Google. You are responsible for keeping your login
-          credentials confidential. Notify us immediately at support@defykegal.com if you believe
+          credentials confidential. Notify us immediately at support@defykegel.com if you believe
           your account has been compromised.
         </p>
         <p>We may suspend or terminate your account if you violate these Terms.</p>
@@ -79,7 +79,7 @@ export default function TermsPage() {
           licensors and protected under intellectual property laws.
         </p>
         <p>
-          If you believe content infringes your rights, contact support@defykegal.com and we will
+          If you believe content infringes your rights, contact support@defykegel.com and we will
           review promptly.
         </p>
 
@@ -130,7 +130,7 @@ export default function TermsPage() {
 
         <h2>14. Contact Us</h2>
         <p>If you have questions, concerns, or complaints, contact:</p>
-        <p>support@defykegal.com</p>
+        <p>support@defykegel.com</p>
       </div>
     </SectionContainer>
   )

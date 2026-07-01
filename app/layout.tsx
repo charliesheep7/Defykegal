@@ -120,8 +120,8 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             '@context': 'https://schema.org',
             '@type': 'Organization',
             name: 'Defy',
-            url: 'https://defykegal.com',
-            logo: 'https://defykegal.com/static/favicons/android-chrome-512x512.png',
+            url: 'https://defykegel.com',
+            logo: 'https://defykegel.com/static/favicons/android-chrome-512x512.png',
             slogan: 'Kegel Exercises for Men — Stronger. Longer. Better.',
             description:
               'Defy is the #1 kegel exercise app for men. Guided daily workouts to strengthen your pelvic floor, improve erections, and beat ED.',

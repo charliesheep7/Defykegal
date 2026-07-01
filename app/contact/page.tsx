@@ -21,10 +21,10 @@ export default function ContactPage() {
               <dt className="text-sm font-medium tracking-wide text-gray-500 uppercase">Email</dt>
               <dd className="mt-1">
                 <a
-                  href="mailto:support@defykegal.com"
+                  href="mailto:support@defykegel.com"
                   className="text-accent-400 hover:text-accent-300"
                 >
-                  support@defykegal.com
+                  support@defykegel.com
                 </a>
               </dd>
             </div>
@@ -35,10 +35,10 @@ export default function ContactPage() {
               <dd className="mt-1 text-gray-300">
                 Found a factual error in one of our articles? Email us at{' '}
                 <a
-                  href="mailto:editorial@defykegal.com"
+                  href="mailto:editorial@defykegel.com"
                   className="text-accent-400 hover:text-accent-300"
                 >
-                  editorial@defykegal.com
+                  editorial@defykegel.com
                 </a>{' '}
                 with the article URL and the specific claim you believe is incorrect. We review all
                 correction requests within 5 business days.
@@ -70,10 +70,10 @@ export default function ContactPage() {
             </Link>{' '}
             or email{' '}
             <a
-              href="mailto:support@defykegal.com"
+              href="mailto:support@defykegel.com"
               className="text-accent-400 hover:text-accent-300"
             >
-              support@defykegal.com
+              support@defykegel.com
             </a>
             .
           </p>

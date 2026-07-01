@@ -112,7 +112,7 @@ export default function PrivacyPage() {
           <li>Request help by contacting us if needed</li>
         </ul>
         <p>
-          <strong>Email:</strong> support@defykegal.com
+          <strong>Email:</strong> support@defykegel.com
         </p>
 
         <h2>Changes to This Policy</h2>
@@ -123,7 +123,7 @@ export default function PrivacyPage() {
 
         <h2>Contact Us</h2>
         <p>If you have any questions, please contact:</p>
-        <p>📩 support@defykegal.com</p>
+        <p>📩 support@defykegel.com</p>
       </div>
     </SectionContainer>
   )

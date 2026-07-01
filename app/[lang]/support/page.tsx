@@ -3,7 +3,7 @@ import SectionContainer from '@/components/SectionContainer'
 
 export const metadata = genPageMetadata({
   title: 'Support',
-  description: 'Need help with Defy? Reach out to our support team at support@defykegal.com.',
+  description: 'Need help with Defy? Reach out to our support team at support@defykegel.com.',
 })
 
 export default function SupportPage() {
@@ -18,7 +18,7 @@ export default function SupportPage() {
 
         <h2>Contact</h2>
         <p>
-          <strong>Email:</strong> <a href="mailto:support@defykegal.com">support@defykegal.com</a>
+          <strong>Email:</strong> <a href="mailto:support@defykegel.com">support@defykegel.com</a>
         </p>
 
         <h2>What to Include</h2>

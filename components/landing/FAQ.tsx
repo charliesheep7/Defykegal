@@ -108,7 +108,7 @@ export default function FAQ() {
           <p className="mb-2 text-sm font-semibold text-white/70">Still have questions?</p>
           <p className="mb-6 text-xs text-white/30">We typically respond within 24 hours.</p>
           <a
-            href="mailto:support@defykegal.com"
+            href="mailto:support@defykegel.com"
             className="inline-flex items-center gap-2 rounded-full border border-white/20 px-8 py-3 text-sm font-semibold text-white/70 transition-all duration-200 hover:border-white/40 hover:text-white"
           >
             Contact Support

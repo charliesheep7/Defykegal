@@ -197,7 +197,7 @@ export default function Page() {
             <section>
               <h2 className="mb-2 text-2xl font-bold text-gray-100">Medical Review</h2>
               <p className="mb-5 text-sm text-gray-500">
-                All health content on defykegal.com is reviewed by a licensed physician before
+                All health content on defykegel.com is reviewed by a licensed physician before
                 publication.
               </p>
               <MedicalReviewerCard author={drWebb} />
