@@ -129,7 +129,7 @@
   }
 
   .prose {
-    & a {
+    & a:not(:where(.not-prose, .not-prose *)) {
       color: rgba(255, 255, 255, 0.9);
       text-decoration-color: rgba(255, 255, 255, 0.3);
 
@@ -159,7 +159,7 @@
   }
 
   .prose-invert {
-    & a {
+    & a:not(:where(.not-prose, .not-prose *)) {
       color: rgba(255, 255, 255, 0.9);
 
       &:hover {
