@@ -122,6 +122,8 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             name: 'Defy',
             url: siteMetadata.siteUrl,
             logo: `${siteMetadata.siteUrl}/static/favicons/android-chrome-512x512.png`,
+            // The identity we can prove: the App Store listing every CTA points at.
+            sameAs: [siteMetadata.appStoreUrl],
             slogan: 'Kegel Exercises for Men — Stronger. Longer. Better.',
             description:
               'Defy is the #1 kegel exercise app for men. Guided daily workouts to strengthen your pelvic floor, improve erections, and beat ED.',

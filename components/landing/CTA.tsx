@@ -1,7 +1,8 @@
 'use client'
 import { Smartphone } from 'lucide-react'
+import siteMetadata from '@/data/siteMetadata'
 
-const IOS_APP_URL = 'https://apps.apple.com/app/defy-kegel-for-men/id0000000000'
+const IOS_APP_URL = siteMetadata.appStoreUrl
 
 export default function CTA() {
   return (

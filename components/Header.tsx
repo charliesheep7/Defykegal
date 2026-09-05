@@ -49,7 +49,7 @@ const Header = () => {
               ))}
           </div>
           <a
-            href="https://apps.apple.com/app/defy-kegel-for-men/id0000000000"
+            href={siteMetadata.appStoreUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="hidden rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm font-semibold text-white transition-all duration-200 hover:bg-white/10 sm:inline-flex"

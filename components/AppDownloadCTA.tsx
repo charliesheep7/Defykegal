@@ -1,4 +1,5 @@
 import Link from './Link'
+import siteMetadata from '@/data/siteMetadata'
 
 interface AppDownloadCTAProps {
   title?: string
@@ -6,7 +7,7 @@ interface AppDownloadCTAProps {
   placement?: string
 }
 
-const IOS_APP_URL = 'https://apps.apple.com/app/defy-kegel-for-men/id0000000000'
+const IOS_APP_URL = siteMetadata.appStoreUrl
 
 const AppDownloadCTA = ({
   title = 'Train your pelvic floor with Defy',

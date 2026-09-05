@@ -9,6 +9,8 @@ const siteMetadata = {
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://www.defykegel.com',
+  // Single source of truth for the store link — every CTA imports this.
+  appStoreUrl: 'https://apps.apple.com/app/defy-kegel-for-men/id6784505748',
   siteRepo: '',
   siteLogo: `${process.env.BASE_PATH || ''}/static/images/Apple/App_store_1024_1x.svg`,
   socialBanner: `${process.env.BASE_PATH || ''}/static/images/logo.png`,

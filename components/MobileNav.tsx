@@ -6,6 +6,7 @@ import { Fragment, useState, useEffect, useRef } from 'react'
 import Link from './Link'
 import headerNavLinks from '@/data/headerNavLinks'
 import { useLocale } from './hooks/useLocale'
+import siteMetadata from '@/data/siteMetadata'
 
 const MobileNav = () => {
   const [navShow, setNavShow] = useState(false)
@@ -93,7 +94,7 @@ const MobileNav = () => {
                 ))}
                 <div className="mt-6">
                   <a
-                    href="https://apps.apple.com/app/defy-kegel-for-men/id0000000000"
+                    href={siteMetadata.appStoreUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="rounded-full bg-white px-8 py-3 text-base font-bold text-black transition-opacity duration-200 hover:opacity-90"
