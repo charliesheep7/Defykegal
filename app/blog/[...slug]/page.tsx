@@ -64,6 +64,18 @@ const buildJsonLdAuthors = (authorDetails: ReturnType<typeof resolveAuthorDetail
       ...(author.seoProfiles || []),
     ].filter(Boolean)
 
+    // The house byline is a team, and a team is an Organization. Typing it as a
+    // Person asserted an identity that cannot be verified; Google reads
+    // `@type` plus `url` to disambiguate authors, so say what it actually is.
+    if (author.slug === siteMetadata.authorSlug) {
+      return {
+        '@type': 'Organization',
+        name: author.name,
+        url: `${siteMetadata.siteUrl}/about`,
+        logo: author.avatar ? `${siteMetadata.siteUrl}${author.avatar}` : undefined,
+        sameAs: sameAs.length > 0 ? Array.from(new Set(sameAs)) : undefined,
+      }
+    }
     return {
       '@type': 'Person',
       name: author.name,
