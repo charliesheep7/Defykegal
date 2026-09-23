@@ -19,15 +19,13 @@ export default function EditorialPolicyPage() {
           <p>
             Defy publishes health content about male pelvic floor function, kegel exercises,
             erectile dysfunction, urinary health, and sexual wellness. Because this content can
-            influence health decisions, we hold it to the same evidence standard used by
-            peer-reviewed urology journals: claims are supported by primary research, clinical
-            guidelines, and expert consensus — not anecdote.
+            influence health decisions, we aim to support clinical claims with research, clinical
+            guidance, and links that readers can check.
           </p>
           <p>
-            Every article on defykegel.com is written by a health-experienced writer and
-            independently reviewed by a board-certified urologist before publication. We do not
-            publish AI-generated content as-is; all content is written by humans, reviewed by a
-            licensed medical professional, and fact-checked against authoritative sources.
+            Articles show an editorial byline and publication date. When an article has been
+            medically reviewed, it displays the reviewer and review date. An article without that
+            label should not be read as having completed medical review.
           </p>
         </section>
 
@@ -35,21 +33,17 @@ export default function EditorialPolicyPage() {
           <h2>Who Creates Our Content</h2>
           <p>
             <strong>Writers:</strong> Defy's editorial team produces all health articles. Writers
-            have backgrounds in health journalism, biomedical science, or men's health
-            communication. Every writer is required to cite primary sources (PubMed-indexed studies,
-            NIH, CDC, FDA, major academic medical centers) and to flag any claim that requires
-            specialist verification.
+            link to research, clinical guidance, and other relevant sources where readers may
+            verify important health claims.
           </p>
           <p>
-            <strong>Medical Reviewers:</strong> Every article is reviewed by a licensed physician
-            with relevant specialty credentials before publication. Our current medical reviewer is{' '}
+            <strong>Medical Reviewers:</strong> Articles marked &ldquo;Medically Reviewed&rdquo;
+            name the reviewing physician. The reviewer listed on those articles is{' '}
             <Link href="/about#dr-marcus-webb" className="text-accent-400 hover:text-accent-300">
               Dr. Lu, MD
             </Link>
             , an Associate Chief Physician and Director of Health Examination with nearly 20 years
-            of clinical experience in chronic disease prevention and integrated medicine. Reviewers
-            check clinical accuracy, verify research citations, and flag any content that
-            contradicts established medical guidelines.
+            of clinical experience in chronic disease prevention and integrated medicine.
           </p>
         </section>
 
@@ -65,14 +59,12 @@ export default function EditorialPolicyPage() {
               sourcing completeness, and adherence to our style guide.
             </li>
             <li>
-              <strong>Medical review:</strong> A board-certified physician reviews all clinical
-              claims for accuracy, checks that the content aligns with current treatment guidelines,
-              and approves or requests revisions.
+              <strong>Medical review:</strong> When a physician reviews an article, we show the
+              reviewer and review date on that article.
             </li>
             <li>
-              <strong>Publication:</strong> The article is published with the writer&apos;s byline,
-              the reviewer&apos;s name and credentials, and all four date stamps (written, medically
-              reviewed, fact-checked, updated).
+              <strong>Publication:</strong> The article is published with an editorial byline and
+              publication date. A medical review date is shown when applicable.
             </li>
           </ol>
         </section>
@@ -80,49 +72,31 @@ export default function EditorialPolicyPage() {
         <section>
           <h2>Sources We Accept</h2>
           <p>
-            <strong>Tier 1 (required for clinical claims):</strong> PubMed-indexed peer-reviewed
-            studies, NIH, CDC, FDA, WHO, major academic medical centers (Mayo Clinic, Cleveland
-            Clinic, Johns Hopkins Medicine), Cochrane Reviews.
+            We prefer original research, clinical guidelines, public health agencies, and major
+            medical centers for health claims. Some articles also link to explanatory summaries;
+            those should not be mistaken for the underlying study or clinical guideline.
           </p>
           <p>
-            <strong>Tier 2 (supporting context):</strong> Major medical associations (American
-            Urological Association, American Board of Urology, American College of Surgeons),
-            government health agencies, and specialty society clinical practice guidelines.
-          </p>
-          <p>
-            <strong>Not accepted as primary citations:</strong> Other health blogs, press releases,
-            industry-funded studies without independent replication, or anecdotal sources.
-          </p>
-          <p>
-            All citations are linked directly to their source (PubMed abstract, journal DOI, or
-            official government health page). We do not cite secondary summaries when the primary
-            source is available.
+            A linked study supports the specific result reported in the article, not a guaranteed
+            outcome for every reader. Please flag a citation that leads to the wrong source.
           </p>
         </section>
 
         <section>
           <h2>Date Transparency</h2>
-          <p>Each article carries four dates:</p>
+          <p>Articles display the dates that are relevant to their visible attribution:</p>
           <ul>
             <li>
-              <strong>Written:</strong> When the article was originally authored.
+              <strong>Published:</strong> The article&apos;s publication date.
             </li>
             <li>
-              <strong>Medically Reviewed:</strong> When a physician last reviewed and approved the
-              clinical content.
-            </li>
-            <li>
-              <strong>Fact-Checked:</strong> When citations and statistics were last verified.
-            </li>
-            <li>
-              <strong>Updated:</strong> When meaningful content changes were made (not cosmetic
-              edits).
+              <strong>Medically Reviewed:</strong> Shown only with a named medical reviewer and
+              review date.
             </li>
           </ul>
           <p>
-            We update articles when clinical guidelines change, new landmark studies are published,
-            or a reader flags a factual discrepancy. We do not refresh dates without substantive
-            content changes.
+            We record meaningful content updates separately from the publication date and do not
+            change the medical review date unless a new review is completed.
           </p>
         </section>
 
@@ -144,10 +118,9 @@ export default function EditorialPolicyPage() {
         <section>
           <h2>AI Content Policy</h2>
           <p>
-            We do not publish health content generated solely by AI tools. All health articles on
-            defykegel.com are written by human writers, reviewed by licensed physicians, and
-            fact-checked against primary sources before publication. AI tools may be used for
-            research assistance, but never as a substitute for human clinical judgment.
+            AI tools are not medical reviewers. A &ldquo;Medically Reviewed&rdquo; label refers to the
+            named human reviewer and the date shown on the article. Readers should inspect cited
+            sources and seek individual medical advice for health decisions.
           </p>
         </section>
 
