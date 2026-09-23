@@ -33,8 +33,8 @@ export default function EditorialPolicyPage() {
           <h2>Who Creates Our Content</h2>
           <p>
             <strong>Writers:</strong> Defy's editorial team produces all health articles. Writers
-            link to research, clinical guidance, and other relevant sources where readers may
-            verify important health claims.
+            link to research, clinical guidance, and other relevant sources where readers may verify
+            important health claims.
           </p>
           <p>
             <strong>Medical Reviewers:</strong> Articles marked &ldquo;Medically Reviewed&rdquo;
@@ -118,8 +118,8 @@ export default function EditorialPolicyPage() {
         <section>
           <h2>AI Content Policy</h2>
           <p>
-            AI tools are not medical reviewers. A &ldquo;Medically Reviewed&rdquo; label refers to the
-            named human reviewer and the date shown on the article. Readers should inspect cited
+            AI tools are not medical reviewers. A &ldquo;Medically Reviewed&rdquo; label refers to
+            the named human reviewer and the date shown on the article. Readers should inspect cited
             sources and seek individual medical advice for health decisions.
           </p>
         </section>

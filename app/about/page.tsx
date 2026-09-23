@@ -196,8 +196,8 @@ export default function Page() {
             <section>
               <h2 className="mb-2 text-2xl font-bold text-gray-100">Medical Review</h2>
               <p className="mb-5 text-sm text-gray-500">
-                Articles marked &ldquo;Medically Reviewed&rdquo; identify their reviewer and the date
-                of that review.
+                Articles marked &ldquo;Medically Reviewed&rdquo; identify their reviewer and the
+                date of that review.
               </p>
               <MedicalReviewerCard author={drWebb} />
             </section>
