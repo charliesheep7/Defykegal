@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Activity, TrendingUp, BookOpen, X, ArrowRight } from 'lucide-react'
+import { Activity, Sparkles, BookOpen, X, ArrowRight } from 'lucide-react'
 
 const features = [
   {
@@ -9,27 +9,27 @@ const features = [
     icon: Activity,
     title: 'Guided Kegel Workouts',
     description:
-      'Step-by-step pelvic floor sessions with rep timers, rest periods, and progressive intensity — designed specifically for the male anatomy.',
+      'Follow guided daily Kegel sessions designed for men and build a repeatable pelvic floor routine.',
     fullDescription:
-      "Defy takes the guesswork out of kegel training. Each session is precisely timed — you'll contract, hold, and release to an audio cue so you always hit the right muscles. Workouts scale in difficulty week by week, building real pelvic floor strength over time. Whether you have 3 minutes or 15, there's a session that fits your schedule.",
+      'Defy gives you short, structured sessions to make daily pelvic floor practice easier to follow. The App Store listing has the current workout modes and feature availability.',
   },
   {
-    id: 'progress-tracking',
-    icon: TrendingUp,
-    title: 'Progress You Can See',
+    id: 'daily-habits',
+    icon: Sparkles,
+    title: 'Daily Habits and Challenges',
     description:
-      'Track sessions, streaks, and milestones as your pelvic floor strengthens. Visible progress keeps you consistent when motivation dips.',
+      'Pair your workouts with daily challenges and motivation to help you stay consistent.',
     fullDescription:
-      "Most men quit kegel training because they can't see results. Defy fixes this by tracking every session, charting your total reps, and celebrating streak milestones. Week-over-week progress graphs show you that the work is paying off — even before you feel it in the bedroom.",
+      'The app combines Kegel practice with motivational prompts and simple habit challenges. Use them to make the routine easier to return to each day.',
   },
   {
     id: 'expert-education',
     icon: BookOpen,
-    title: 'Science-Backed Education',
+    title: 'Men’s Health Resources',
     description:
-      'Learn exactly how kegel exercises target ED, premature ejaculation, and urinary control — explained in plain English, backed by urological research.',
+      'Read practical resources on pelvic floor training and men’s wellness in plain English.',
     fullDescription:
-      "Understanding why kegels work makes you stick with them. Defy's built-in library explains the pelvic floor anatomy, how it affects erection quality and stamina, what research says about timelines, and which exercises target which outcomes.",
+      'Defy includes educational resources to help you understand and stick with your routine. This content is informational and is not a substitute for advice from a qualified healthcare professional.',
   },
 ]
 
