@@ -20,7 +20,7 @@ export default function Hero() {
             {/* Eyebrow */}
             <div className="animate-fade-in inline-flex items-center gap-2">
               <span className="h-px w-8 bg-white/20" />
-              <span className="eyebrow">Science-Backed · Built for Men</span>
+              <span className="eyebrow">Guided Training · Built for Men</span>
             </div>
 
             {/* Headline */}
@@ -30,9 +30,9 @@ export default function Hero() {
             >
               Kegel Exercises
               <br />
-              <span className="text-white/40">That Actually</span>
+              <span className="text-white/40">For Men,</span>
               <br />
-              Work.
+              Made Simple.
             </h1>
 
             {/* Body */}
@@ -40,8 +40,8 @@ export default function Hero() {
               className="animate-fade-in animation-delay-400 max-w-lg text-base leading-relaxed text-white/50 sm:text-lg"
               style={{ opacity: 0 }}
             >
-              Defy delivers guided kegel training clinically proven to improve erections, prevent
-              erectile dysfunction, and boost pelvic floor strength — in minutes a day.
+              Defy guides you through short daily Kegel sessions and helps you build a consistent
+              pelvic floor routine.
             </p>
 
             {/* CTA */}
@@ -74,7 +74,7 @@ export default function Hero() {
                 </a>
               </div>
               <span className="text-xs tracking-wide text-white/30">
-                Free to start · Trusted by 10,000+ men · Private & Discreet
+                Free to start · Private &amp; Discreet
               </span>
             </div>
           </div>
@@ -84,7 +84,7 @@ export default function Hero() {
             <div className="relative mx-auto aspect-[4/5] w-full max-w-xl">
               <Image
                 src="/static/images/app_hero_dark.png"
-                alt="Defy app — guided kegel exercises for men to improve erections and beat ED"
+                alt="Defy app with guided Kegel exercises for men"
                 fill
                 className="object-contain"
                 priority

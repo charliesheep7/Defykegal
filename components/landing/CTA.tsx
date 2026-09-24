@@ -30,8 +30,7 @@ export default function CTA() {
 
         {/* Body */}
         <p className="mx-auto mb-12 max-w-xl text-base leading-relaxed text-white/50 sm:text-lg">
-          Join thousands of men strengthening their pelvic floor and reclaiming their confidence —
-          one rep at a time.
+          Build a consistent pelvic floor routine with guided Kegel sessions designed for men.
         </p>
 
         {/* CTA */}
@@ -48,7 +47,7 @@ export default function CTA() {
         </a>
 
         <p className="mt-6 text-xs tracking-wide text-white/30">
-          Private, discreet, and science-backed. No credit card required.
+          Free to download · Full access requires a subscription.
         </p>
       </div>
     </section>

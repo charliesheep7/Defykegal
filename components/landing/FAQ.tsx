@@ -1,32 +1,41 @@
 'use client'
 import { useState } from 'react'
 import { ChevronDown } from 'lucide-react'
+import siteMetadata from '@/data/siteMetadata'
 
 const faqs = [
   {
-    question: 'What are kegel exercises for men?',
+    question: 'What are Kegel exercises for men?',
     answer:
-      'Kegel exercises are contractions of the pelvic floor muscles — the muscles that control bladder function, erection quality, and ejaculation. Men have the same pelvic floor as women, and strengthening it through regular kegel training has been clinically shown to improve erectile function, boost orgasm intensity, and help with urinary control.',
+      'Kegel exercises involve tightening and relaxing the pelvic floor muscles. They can help with bladder and bowel control, and may support sexual function. Learning to use the right muscles matters; a healthcare professional or pelvic floor therapist can help if you are unsure.',
+    source: 'https://www.niddk.nih.gov/health-information/urologic-diseases/kegel-exercises',
+    sourceLabel: 'NIDDK guide to Kegel exercises',
   },
   {
-    question: 'Can kegel exercises really help with erectile dysfunction (ED)?',
+    question: 'How does Defy help me practice?',
     answer:
-      'Yes. A landmark study published in the British Journal of General Practice found that pelvic floor muscle exercises restored normal erectile function in 40% of men with ED and significantly improved function in another 35.5%. Kegels improve blood flow to the pelvic region and strengthen the muscles that trap blood in the penis during erection.',
+      'Defy provides guided daily Kegel sessions, habit challenges, and men’s health resources to help you build a routine. The App Store listing has the current feature details.',
+    source: siteMetadata.appStoreUrl,
+    sourceLabel: 'Defy on the App Store',
   },
   {
-    question: 'How long does it take to see results?',
+    question: 'Can Defy treat erectile dysfunction?',
     answer:
-      'Most men notice improvements in bladder control within 4–6 weeks of consistent daily training. Improvements in erectile function and stamina typically appear between 6–12 weeks. The key is consistency — even one missed week can slow progress. Defy keeps you on track with streak reminders and session logging.',
+      'Defy is a wellness app, not a diagnosis or medical treatment. Pelvic floor exercises may help some people, but results vary. If you have persistent erection problems, pelvic pain, or other symptoms, speak with a qualified healthcare professional.',
   },
   {
-    question: 'How many kegel reps should I do per day?',
+    question: 'How often should I do Kegel exercises?',
     answer:
-      "Research suggests 30–40 contractions per day, broken into 2–3 sessions, is optimal for most men. Defy automatically programs the right volume for your experience level and progresses you safely — you don't need to count anything yourself.",
+      'The right plan depends on your needs. More repetitions are not always better; overdoing pelvic floor exercises can cause strain. Ask a healthcare professional for advice if you are treating symptoms or recovering from surgery.',
+    source: 'https://www.niddk.nih.gov/health-information/urologic-diseases/kegel-exercises',
+    sourceLabel: 'NIDDK exercise guidance',
   },
   {
-    question: 'Are kegel exercises safe for all men?',
+    question: 'Is Defy free?',
     answer:
-      'For the vast majority of men, kegel exercises are completely safe and have no side effects. However, men with certain prostate conditions or chronic pelvic pain syndrome should consult a urologist before starting pelvic floor training. Always listen to your body and stop if you experience pain.',
+      'Defy is free to download. Access to all app features requires an active subscription. Check the App Store for current prices and terms before subscribing.',
+    source: siteMetadata.appStoreUrl,
+    sourceLabel: 'Current App Store terms',
   },
 ]
 
@@ -96,6 +105,16 @@ export default function FAQ() {
                 {isExpanded && (
                   <div className="animate-fade-in pb-6">
                     <p className="text-sm leading-relaxed text-white/50">{faq.answer}</p>
+                    {'source' in faq && faq.source && (
+                      <a
+                        href={faq.source}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-3 inline-block text-xs text-white/60 underline underline-offset-4 hover:text-white"
+                      >
+                        {faq.sourceLabel}
+                      </a>
+                    )}
                   </div>
                 )}
               </div>

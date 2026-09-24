@@ -5,7 +5,7 @@ const siteMetadata = {
   authorSlug: 'defy-team',
   headerTitle: 'Defy',
   description:
-    'Defy is the #1 kegel exercise app for men. Strengthen your pelvic floor, improve erections, beat ED, and enhance sexual performance with guided daily workouts.',
+    'Defy is a guided Kegel exercise app for men. Build a consistent pelvic floor routine with short daily workouts, habit challenges, and practical wellness resources.',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://www.defykegel.com',
