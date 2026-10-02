@@ -8,7 +8,7 @@ import siteMetadata from '@/data/siteMetadata'
 export const metadata = genPageMetadata({
   title: 'Defy — Kegel Exercises for Men',
   description:
-    'Build a pelvic floor routine with Defy, the guided Kegel exercise app for men. Explore short daily workouts and download the app on iOS.',
+    'Build a pelvic floor routine with Defy, the guided Kegel exercise app for men. Explore short daily workouts and download the app on iOS and Android.',
 })
 
 export default async function Page() {
@@ -36,7 +36,7 @@ export default async function Page() {
                 url: siteMetadata.appStoreUrl,
                 installUrl: siteMetadata.appStoreUrl,
                 applicationCategory: 'HealthApplication',
-                operatingSystem: 'iOS',
+                operatingSystem: 'iOS, Android',
                 description: siteMetadata.description,
                 publisher: { '@id': `${siteMetadata.siteUrl}/#organization` },
               },

@@ -67,6 +67,22 @@ export default function Hero() {
                   Download on iOS
                 </a>
                 <a
+                  href={siteMetadata.googlePlayUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-bold text-black transition-opacity duration-200 hover:opacity-90"
+                >
+                  <svg
+                    className="h-5 w-5"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path d="M4 3v18l17-9L4 3z" />
+                  </svg>
+                  Get it on Google Play
+                </a>
+                <a
                   href="#features"
                   className="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-4 text-sm font-semibold text-white/70 transition-all duration-200 hover:border-white/40 hover:text-white"
                 >
