@@ -142,11 +142,14 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                   <div>
                     <p className="text-sm font-semibold text-white">Defy</p>
                     <p className="mt-1 max-w-xs text-xs text-gray-500">
-                      Evidence-based kegel training for men. Health content medically reviewed by
-                      board-certified urologists.
+                      Guided Kegel training for men, with health resources and sources you can
+                      check. See each article for its authorship and review status.
                     </p>
                   </div>
                   <nav className="flex flex-wrap gap-x-6 gap-y-2 text-xs text-gray-500">
+                    <Link href="/kegel-guide" className="transition-colors hover:text-gray-300">
+                      Kegel guide
+                    </Link>
                     <Link href="/about" className="transition-colors hover:text-gray-300">
                       About
                     </Link>

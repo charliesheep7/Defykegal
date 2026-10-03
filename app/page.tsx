@@ -2,6 +2,7 @@ import Hero from '@/components/landing/Hero'
 import Features from '@/components/landing/Features'
 import CTA from '@/components/landing/CTA'
 import FAQ from '@/components/landing/FAQ'
+import Guides from '@/components/landing/Guides'
 import { genPageMetadata } from 'app/seo'
 import siteMetadata from '@/data/siteMetadata'
 
@@ -46,6 +47,7 @@ export default async function Page() {
       />
       <Hero />
       <Features />
+      <Guides />
       <CTA />
       <FAQ />
     </div>

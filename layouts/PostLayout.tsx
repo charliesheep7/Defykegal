@@ -46,7 +46,7 @@ export default function PostLayout({
   prev,
   children,
 }: LayoutProps) {
-  const { filePath, path, slug, date, title, tags, faqs, summary, lang, lastReviewed } =
+  const { filePath, path, slug, date, lastmod, title, tags, faqs, summary, lang, lastReviewed } =
     content as CoreContent<Blog> & { lastReviewed?: string }
   const basePath = path.split('/')[0]
   const isArabic = lang === 'ar'
@@ -71,6 +71,17 @@ export default function PostLayout({
                   </dd>
                 </div>
               </dl>
+              {lastmod && new Date(lastmod) > new Date(date) && (
+                <p className="text-sm text-gray-500 dark:text-gray-400">
+                  {isArabic ? 'حُدّث في ' : 'Updated '}
+                  <time dateTime={lastmod}>
+                    {new Date(lastmod).toLocaleDateString(
+                      isArabic ? 'ar-SA' : siteMetadata.locale,
+                      { year: 'numeric', month: 'long', day: 'numeric' }
+                    )}
+                  </time>
+                </p>
+              )}
               <div>
                 <PageTitle>{title}</PageTitle>
               </div>
@@ -127,6 +138,9 @@ export default function PostLayout({
                       slug: reviewerDetails.slug,
                     }}
                     lastReviewed={lastReviewed}
+                    updatedAfterReview={Boolean(
+                      lastmod && new Date(lastmod) > new Date(lastReviewed)
+                    )}
                   />
                 )}
                 {children}

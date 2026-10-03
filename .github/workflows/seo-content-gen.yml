@@ -1,17 +1,16 @@
 name: SEO Content Generation
 
 on:
-  schedule:
-    # Run at 00:00 and 12:00 UTC every day
-    - cron: '0 0,12 * * *'
-  workflow_dispatch: # Allow manual triggering
+  # Scheduled bulk publishing is paused while the core guides' discovery and
+  # indexing are evaluated. Keep deliberate, reviewed runs available manually.
+  workflow_dispatch:
 
 jobs:
   generate-content:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -28,8 +27,6 @@ jobs:
       - name: Install dependencies
         working-directory: ./seo-blog-generator
         run: npm ci
-
-
 
       - name: Run content generation
         working-directory: ./seo-blog-generator

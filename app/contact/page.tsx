@@ -51,8 +51,8 @@ export default function ContactPage() {
           <h2 className="mb-4 text-xl font-semibold text-gray-200">About Defy</h2>
           <p className="leading-relaxed text-gray-400">
             Defy is a men&apos;s pelvic floor health app built to make kegel training simple,
-            evidence-based, and consistent. Our blog content is medically reviewed by
-            board-certified urologists. See our{' '}
+            accessible, and consistent. Our articles identify their authors; a medical review label
+            applies only when a reviewer and review date are shown. See our{' '}
             <Link href="/editorial-policy" className="text-accent-400 hover:text-accent-300">
               editorial policy
             </Link>{' '}
