@@ -29,9 +29,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }, undefined)
 
   const staticRoutes = ['', 'blog', 'about', 'privacy', 'terms', 'support']
+  const updatedRoutes = new Set(['', 'kegel-guide', 'about', 'contact', 'editorial-policy'])
+  staticRoutes.push('kegel-guide', 'contact', 'editorial-policy')
   const routes = staticRoutes.map((route) => ({
     url: route ? `${siteUrl}/${route}` : siteUrl,
-    lastModified: route === 'blog' && newestPost ? newestPost : STATIC_PAGES_UPDATED,
+    lastModified:
+      route === 'blog' && newestPost
+        ? newestPost
+        : updatedRoutes.has(route)
+          ? '2026-10-03'
+          : STATIC_PAGES_UPDATED,
   }))
 
   // Tag archives change whenever a post is published.

@@ -4,11 +4,11 @@ export default function MedicalDisclaimer() {
       <p className="font-semibold text-gray-300">Medical Disclaimer</p>
       <p className="mt-1 leading-relaxed">
         This article is for informational purposes only and does not constitute medical advice,
-        diagnosis, or treatment. The content is reviewed for clinical accuracy by a board-certified
-        urologist but is not a substitute for professional medical advice from your own physician or
-        other qualified healthcare provider. Always seek the advice of a qualified healthcare
-        professional with any questions you may have regarding a medical condition. Never disregard
-        professional medical advice or delay seeking it based on information you read here.
+        diagnosis, or treatment. See the article's named reviewer and review date for its recorded
+        review status. It is not a substitute for advice from your own physician or other qualified
+        healthcare provider. Always seek the advice of a qualified healthcare professional with any
+        questions you may have regarding a medical condition. Never disregard professional medical
+        advice or delay seeking it based on information you read here.
       </p>
     </div>
   )

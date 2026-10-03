@@ -14,6 +14,7 @@ interface MedicalReviewer {
 interface MedicalReviewBannerProps {
   reviewer: MedicalReviewer
   lastReviewed: string
+  updatedAfterReview?: boolean
 }
 
 const reviewDateTemplate: Intl.DateTimeFormatOptions = {
@@ -22,7 +23,11 @@ const reviewDateTemplate: Intl.DateTimeFormatOptions = {
   day: 'numeric',
 }
 
-export default function MedicalReviewBanner({ reviewer, lastReviewed }: MedicalReviewBannerProps) {
+export default function MedicalReviewBanner({
+  reviewer,
+  lastReviewed,
+  updatedAfterReview,
+}: MedicalReviewBannerProps) {
   const displayName = reviewer.honorificSuffix
     ? `${reviewer.name}, ${reviewer.honorificSuffix}`
     : reviewer.name
@@ -64,6 +69,12 @@ export default function MedicalReviewBanner({ reviewer, lastReviewed }: MedicalR
             {reviewedDate}
           </time>
         </p>
+        {updatedAfterReview && (
+          <p className="mt-2 text-xs text-gray-400">
+            Editorial updates were made after this review date. A new medical review is not
+            recorded.
+          </p>
+        )}
       </div>
     </div>
   )

@@ -194,7 +194,9 @@ export default function Page() {
           {/* Medical Review */}
           {drWebb && (
             <section>
-              <h2 className="mb-2 text-2xl font-bold text-gray-100">Medical Review</h2>
+              <h2 className="mb-2 text-2xl font-bold text-gray-100">
+                Clinical credentials and review status
+              </h2>
               <p className="mb-5 text-sm text-gray-500">
                 Articles marked &ldquo;Medically Reviewed&rdquo; identify their reviewer and the
                 date of that review.

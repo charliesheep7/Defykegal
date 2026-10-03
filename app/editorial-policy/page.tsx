@@ -11,7 +11,7 @@ export default function EditorialPolicyPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6 xl:px-0">
       <h1 className="mb-2 text-4xl font-bold tracking-tight text-gray-100">Editorial Policy</h1>
-      <p className="mb-10 text-sm text-gray-500">Last updated: June 26, 2026</p>
+      <p className="mb-10 text-sm text-gray-500">Last updated: October 3, 2026</p>
 
       <div className="prose dark:prose-invert max-w-none space-y-10">
         <section>
@@ -40,10 +40,11 @@ export default function EditorialPolicyPage() {
             <strong>Medical Reviewers:</strong> Articles marked &ldquo;Medically Reviewed&rdquo;
             name the reviewing physician. The reviewer listed on those articles is{' '}
             <Link href="/about#dr-marcus-webb" className="text-accent-400 hover:text-accent-300">
-              Dr. Lu, MD
+              Dr. Lu Chong
             </Link>
-            , an Associate Chief Physician and Director of Health Examination with nearly 20 years
-            of clinical experience in chronic disease prevention and integrated medicine.
+            . The linked hospital profile describes medical oncology, health examination, and
+            preventive care; it does not establish board certification in urology. A credential
+            profile alone does not mean that an article has been reviewed.
           </p>
         </section>
 
@@ -103,10 +104,9 @@ export default function EditorialPolicyPage() {
         <section>
           <h2>Conflict of Interest Policy</h2>
           <p>
-            Defy is an app company. Our editorial content is produced independently of our
-            commercial operations. Medical reviewers are compensated for their time; this
-            compensation is fixed and not contingent on content outcomes or commercial performance.
-            No advertiser or commercial partner influences our editorial decisions.
+            Defy is an app company, and articles mentioning its app have a commercial connection to
+            the product. Citing research about pelvic floor training does not establish that the
+            Defy app itself was studied, clinically validated, or endorsed by the researchers.
           </p>
           <p>
             Where Defy&apos;s app is referenced in an article (e.g., as a tool for kegel training),
