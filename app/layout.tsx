@@ -6,7 +6,8 @@ import { Geist_Mono, Noto_Sans_Arabic } from 'next/font/google'
 import { Analytics, AnalyticsConfig } from 'pliny/analytics'
 import { SearchProvider, SearchConfig } from 'pliny/search'
 import Header from '@/components/Header'
-import Link from '@/components/Link'
+import Footer from '@/components/Footer'
+import RTLHandler from '@/components/RTLHandler'
 import siteMetadata from '@/data/siteMetadata'
 import { ThemeProviders } from './theme-providers'
 import { Metadata } from 'next'
@@ -134,51 +135,10 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <ThemeProviders>
           <Analytics analyticsConfig={siteMetadata.analytics as AnalyticsConfig} />
           <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
+            <RTLHandler />
             <Header />
             <main className="mb-auto">{children}</main>
-            <footer className="mt-16 border-t border-white/8">
-              <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6">
-                <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
-                  <div>
-                    <p className="text-sm font-semibold text-white">Defy</p>
-                    <p className="mt-1 max-w-xs text-xs text-gray-500">
-                      Guided Kegel training for men, with health resources and sources you can
-                      check. See each article for its authorship and review status.
-                    </p>
-                  </div>
-                  <nav className="flex flex-wrap gap-x-6 gap-y-2 text-xs text-gray-500">
-                    <Link href="/kegel-guide" className="transition-colors hover:text-gray-300">
-                      Kegel guide
-                    </Link>
-                    <Link href="/about" className="transition-colors hover:text-gray-300">
-                      About
-                    </Link>
-                    <Link href="/blog" className="transition-colors hover:text-gray-300">
-                      Blog
-                    </Link>
-                    <Link
-                      href="/editorial-policy"
-                      className="transition-colors hover:text-gray-300"
-                    >
-                      Editorial Policy
-                    </Link>
-                    <Link href="/contact" className="transition-colors hover:text-gray-300">
-                      Contact
-                    </Link>
-                    <Link href="/privacy" className="transition-colors hover:text-gray-300">
-                      Privacy
-                    </Link>
-                    <Link href="/terms" className="transition-colors hover:text-gray-300">
-                      Terms
-                    </Link>
-                  </nav>
-                </div>
-                <p className="mt-8 text-xs text-gray-600">
-                  © {new Date().getFullYear()} Defy. All content is for informational purposes only
-                  and does not constitute medical advice.
-                </p>
-              </div>
-            </footer>
+            <Footer />
           </SearchProvider>
         </ThemeProviders>
       </body>

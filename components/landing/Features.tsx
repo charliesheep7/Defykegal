@@ -2,38 +2,17 @@
 
 import { useState } from 'react'
 import { Activity, Sparkles, BookOpen, X, ArrowRight } from 'lucide-react'
+import type { Dictionary } from '@/types/dictionary'
+import en from '../../dictionaries/en.json'
 
-const features = [
-  {
-    id: 'guided-workouts',
-    icon: Activity,
-    title: 'Guided Kegel Workouts',
-    description:
-      'Follow guided daily Kegel sessions designed for men and build a repeatable pelvic floor routine.',
-    fullDescription:
-      'Defy gives you short, structured sessions to make daily pelvic floor practice easier to follow. The App Store listing has the current workout modes and feature availability.',
-  },
-  {
-    id: 'daily-habits',
-    icon: Sparkles,
-    title: 'Daily Habits and Challenges',
-    description:
-      'Pair your workouts with daily challenges and motivation to help you stay consistent.',
-    fullDescription:
-      'The app combines Kegel practice with motivational prompts and simple habit challenges. Use them to make the routine easier to return to each day.',
-  },
-  {
-    id: 'expert-education',
-    icon: BookOpen,
-    title: 'Men’s Health Resources',
-    description:
-      'Read practical resources on pelvic floor training and men’s wellness in plain English.',
-    fullDescription:
-      'Defy includes educational resources to help you understand and stick with your routine. This content is informational and is not a substitute for advice from a qualified healthcare professional.',
-  },
-]
+const featureIcons = [
+  { id: 'guided-workouts', key: 'guidedWorkouts', icon: Activity },
+  { id: 'daily-habits', key: 'dailyHabits', icon: Sparkles },
+  { id: 'expert-education', key: 'expertEducation', icon: BookOpen },
+] as const
 
-export default function Features() {
+export default function Features({ dict = en.features }: { dict?: Dictionary['features'] }) {
+  const features = featureIcons.map((f) => ({ ...f, ...dict.items[f.key] }))
   const [selectedFeature, setSelectedFeature] = useState<string | null>(null)
 
   const openModal = (featureId: string) => {
@@ -55,11 +34,11 @@ export default function Features() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
           {/* Section header */}
           <div className="mb-16">
-            <span className="eyebrow">Features</span>
+            <span className="eyebrow">{dict.eyebrow}</span>
             <h2 className="text-display mt-4 font-bold text-white">
-              Everything you need
+              {dict.headingLine1}
               <br />
-              <span className="text-white/40">to train smarter.</span>
+              <span className="text-white/40">{dict.headingLine2}</span>
             </h2>
           </div>
 
@@ -91,7 +70,7 @@ export default function Features() {
                       onClick={() => openModal(feature.id)}
                       className="inline-flex items-center gap-2 text-sm font-semibold text-white/40 transition-colors duration-200 hover:text-white"
                     >
-                      Learn more
+                      {dict.learnMore}
                       <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
                     </button>
                   </div>
@@ -118,7 +97,7 @@ export default function Features() {
             <button
               onClick={closeModal}
               className="absolute top-4 right-4 rounded-lg p-2 text-white/30 transition-colors hover:bg-white/5 hover:text-white/60"
-              aria-label="Close modal"
+              aria-label={dict.closeModal}
             >
               <X className="h-5 w-5" />
             </button>
@@ -140,7 +119,7 @@ export default function Features() {
               onClick={closeModal}
               className="rounded-full bg-white px-8 py-3 text-sm font-bold text-black transition-opacity duration-200 hover:opacity-90"
             >
-              Got it
+              {dict.gotIt}
             </button>
           </div>
         </div>

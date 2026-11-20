@@ -1,0 +1,155 @@
+{
+  "meta": {
+    "homeTitle": "Defy – Exercices de Kegel pour hommes",
+    "homeDescription": "Mets en place une routine pour ton périnée avec Defy, l’app d’exercices de Kegel guidés pour hommes. Découvre de courtes séances quotidiennes et télécharge l’app sur iOS et Android.",
+    "blogTitle": "Blog",
+    "blogDescription": "Les guides de l’équipe Defy sur les exercices de Kegel pour hommes, la santé du plancher pelvien, les troubles de l’érection et la sexualité masculine. Articles en anglais.",
+    "privacyTitle": "Politique de confidentialité",
+    "privacyDescription": "Découvre quelles données personnelles Defy collecte, comment elles sont utilisées et comment elles sont protégées.",
+    "termsTitle": "Conditions d’utilisation",
+    "termsDescription": "Les règles, les conditions d’usage et les dispositions juridiques qui encadrent ton utilisation de l’app Defy."
+  },
+  "nav": {
+    "home": "Accueil",
+    "kegelGuide": "Guide Kegel",
+    "blog": "Blog",
+    "about": "À propos",
+    "support": "Assistance",
+    "download": "Télécharger",
+    "selectLanguage": "Choisir la langue",
+    "toggleMenu": "Ouvrir ou fermer le menu"
+  },
+  "footer": {
+    "tagline": "Un entraînement de Kegel guidé pour les hommes, avec des ressources santé et des sources que tu peux vérifier. Chaque article indique son auteur et son statut de relecture.",
+    "kegelGuide": "Guide Kegel",
+    "about": "À propos",
+    "blog": "Blog",
+    "editorialPolicy": "Charte éditoriale",
+    "contact": "Contact",
+    "privacy": "Confidentialité",
+    "terms": "Conditions",
+    "disclaimer": "Tous les contenus sont fournis à titre informatif uniquement et ne constituent pas un avis médical."
+  },
+  "hero": {
+    "eyebrow": "Entraînement guidé · Pensé pour les hommes",
+    "headlineLine1": "Les exercices de Kegel",
+    "headlineLine2": "pour hommes,",
+    "headlineLine3": "tout simplement.",
+    "body": "Defy te guide à travers de courtes séances de Kegel quotidiennes et t’aide à installer une routine régulière pour ton périnée.",
+    "ctaIos": "Télécharger sur iOS",
+    "ctaAndroid": "Disponible sur Google Play",
+    "ctaHowItWorks": "Voir comment ça marche",
+    "note": "Gratuit pour commencer · Privé et discret",
+    "imageAlt": "L’app Defy avec des exercices de Kegel guidés pour hommes"
+  },
+  "features": {
+    "eyebrow": "Fonctionnalités",
+    "headingLine1": "Tout ce qu’il te faut",
+    "headingLine2": "pour t’entraîner plus malin.",
+    "learnMore": "En savoir plus",
+    "gotIt": "Compris",
+    "closeModal": "Fermer la fenêtre",
+    "items": {
+      "guidedWorkouts": {
+        "title": "Séances de Kegel guidées",
+        "description": "Suis des séances de Kegel quotidiennes guidées, conçues pour les hommes, et installe une routine du plancher pelvien facile à répéter.",
+        "fullDescription": "Defy te propose des séances courtes et structurées pour que ta pratique quotidienne du périnée soit plus facile à suivre. La fiche App Store indique les modes d’entraînement et les fonctionnalités actuellement disponibles."
+      },
+      "dailyHabits": {
+        "title": "Habitudes et défis quotidiens",
+        "description": "Associe tes séances à des défis quotidiens et à de la motivation pour t’aider à rester régulier.",
+        "fullDescription": "L’app associe les exercices de Kegel à des messages de motivation et à des défis d’habitude simples. Sers-t’en pour revenir plus facilement à ta routine chaque jour."
+      },
+      "expertEducation": {
+        "title": "Ressources santé au masculin",
+        "description": "Lis des ressources pratiques et claires sur l’entraînement du plancher pelvien et le bien-être masculin.",
+        "fullDescription": "Defy propose des contenus éducatifs pour t’aider à comprendre ta routine et à t’y tenir. Ces contenus sont informatifs et ne remplacent pas l’avis d’un professionnel de santé qualifié."
+      }
+    }
+  },
+  "guides": {
+    "eyebrow": "D’abord comprendre",
+    "heading": "Un meilleur départ pour entraîner ton plancher pelvien.",
+    "body": "Apprends les bases, regarde ce que disent les études et comprends le rôle du relâchement avant de choisir une routine.",
+    "englishNote": "Ces guides sont en anglais.",
+    "explore": "Découvrir le guide Kegel",
+    "items": {
+      "kegels-for-men": {
+        "title": "Commence par les bases",
+        "description": "Ce que sont les exercices de Kegel, comment trouver les bons muscles et quand demander de l’aide."
+      },
+      "pelvic-floor-muscles": {
+        "title": "Comprends l’anatomie",
+        "description": "Une carte du plancher pelvien masculin et des différents rôles de ses muscles."
+      },
+      "7-kegel-exercises-for-men": {
+        "title": "Vérifie ta technique",
+        "description": "Contraction, respiration, relâchement complet et erreurs d’entraînement fréquentes."
+      },
+      "benefits-of-kegels-for-men": {
+        "title": "Lis ce que disent les études",
+        "description": "Ce que suggèrent les études, leurs limites et pourquoi les résultats varient."
+      },
+      "how-to-relax-pelvic-floor-muscles": {
+        "title": "Apprends à relâcher",
+        "description": "Pourquoi serrer davantage n’est pas toujours la solution, surtout en cas de douleur."
+      }
+    }
+  },
+  "cta": {
+    "eyebrow": "Disponible sur iOS et Android",
+    "headingLine1": "Lance ton entraînement Kegel",
+    "headingLine2": "dès aujourd’hui.",
+    "body": "Installe une routine régulière pour ton périnée avec des séances de Kegel guidées, conçues pour les hommes.",
+    "ctaIos": "Télécharger sur iOS – Gratuit",
+    "ctaAndroid": "Disponible sur Google Play",
+    "note": "Téléchargement gratuit · L’accès complet nécessite un abonnement."
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "headingLine1": "Questions fréquentes,",
+    "headingLine2": "nos réponses.",
+    "stillQuestions": "Encore des questions ?",
+    "responseTime": "Nous répondons généralement sous 24 heures.",
+    "contactSupport": "Contacter l’assistance",
+    "items": [
+      {
+        "question": "Que sont les exercices de Kegel pour hommes ?",
+        "answer": "Les exercices de Kegel consistent à contracter puis relâcher les muscles du plancher pelvien. Ils peuvent aider à mieux contrôler la vessie et les intestins, et pourraient soutenir la fonction sexuelle. Bien cibler les bons muscles est important : en cas de doute, un professionnel de santé ou un kiné spécialisé en rééducation périnéale peut t’aider.",
+        "sourceLabel": "Guide du NIDDK sur les exercices de Kegel (en anglais)"
+      },
+      {
+        "question": "Comment Defy m’aide-t-il à m’entraîner ?",
+        "answer": "Defy te propose des séances de Kegel quotidiennes guidées, des défis d’habitude et des ressources sur la santé masculine pour t’aider à installer une routine. La fiche App Store présente le détail des fonctionnalités actuelles.",
+        "sourceLabel": "Defy sur l’App Store"
+      },
+      {
+        "question": "Defy peut-il traiter les troubles de l’érection ?",
+        "answer": "Defy est une app de bien-être, pas un outil de diagnostic ni un traitement médical. Les exercices du plancher pelvien peuvent aider certaines personnes, mais les résultats varient. Si tu as des problèmes d’érection persistants, des douleurs pelviennes ou d’autres symptômes, parles-en à un professionnel de santé qualifié.",
+        "sourceLabel": ""
+      },
+      {
+        "question": "À quelle fréquence faire les exercices de Kegel ?",
+        "answer": "Le bon programme dépend de tes besoins. Plus de répétitions, ce n’est pas toujours mieux : trop solliciter le plancher pelvien peut entraîner des tensions. Demande conseil à un professionnel de santé si tu traites des symptômes ou si tu te remets d’une opération.",
+        "sourceLabel": "Recommandations du NIDDK (en anglais)"
+      },
+      {
+        "question": "Defy est-il gratuit ?",
+        "answer": "Defy est gratuit à télécharger. L’accès à toutes les fonctionnalités de l’app nécessite un abonnement actif. Vérifie les prix et les conditions en vigueur sur l’App Store avant de t’abonner.",
+        "sourceLabel": "Conditions actuelles sur l’App Store"
+      }
+    ]
+  },
+  "blog": {
+    "title": "Tous les articles",
+    "englishNote": "Nos articles sont pour l’instant disponibles uniquement en anglais.",
+    "searchPlaceholder": "Rechercher un article",
+    "noPosts": "Aucun article trouvé."
+  },
+  "legal": {
+    "englishNote": "Ce document est fourni en anglais. Seule la version anglaise fait foi.",
+    "privacyHeading": "Politique de confidentialité",
+    "termsHeading": "Conditions d’utilisation",
+    "lastUpdated": "Dernière mise à jour"
+  }
+}

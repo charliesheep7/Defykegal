@@ -1,88 +1,155 @@
 {
+  "meta": {
+    "homeTitle": "Defy — Kegel Exercises for Men",
+    "homeDescription": "Build a pelvic floor routine with Defy, the guided Kegel exercise app for men. Explore short daily workouts and download the app on iOS and Android.",
+    "blogTitle": "Blog",
+    "blogDescription": "Guides on kegel exercises for men, pelvic floor health, erectile dysfunction, and male sexual performance from the Defy team.",
+    "privacyTitle": "Privacy Policy",
+    "privacyDescription": "Understand what personal data Defy collects, how it is used, and the safeguards that protect it.",
+    "termsTitle": "Terms of Service",
+    "termsDescription": "Read the rules, acceptable use guidelines, and legal terms that govern your use of the Defy app."
+  },
   "nav": {
     "home": "Home",
-    "blog": "Blog"
+    "kegelGuide": "Kegel guide",
+    "blog": "Blog",
+    "about": "About",
+    "support": "Support",
+    "download": "Download",
+    "selectLanguage": "Select language",
+    "toggleMenu": "Toggle Menu"
   },
   "footer": {
+    "tagline": "Guided Kegel training for men, with health resources and sources you can check. See each article for its authorship and review status.",
+    "kegelGuide": "Kegel guide",
+    "about": "About",
+    "blog": "Blog",
+    "editorialPolicy": "Editorial Policy",
+    "contact": "Contact",
     "privacy": "Privacy",
-    "terms": "Terms"
-  },
-  "home": {
-    "latest": "Latest",
-    "noPosts": "No posts found.",
-    "readMore": "Read more →",
-    "allPosts": "All Posts →",
-    "publishedOn": "Published on"
+    "terms": "Terms",
+    "disclaimer": "All content is for informational purposes only and does not constitute medical advice."
   },
   "hero": {
-    "badge": "Learn Islam, One Swipe at a Time",
-    "tagline": "Learn your Deen, one swipe at a time",
-    "question": "Tired of doom-scrolling? Put those minutes to work for your Deen.",
-    "subtitle": "DeenUp turns the endless scroll into something that actually matters. Swipe through short, scholar-approved Islamic lessons, take quick quizzes, and build a daily streak — the fun, effortless way to grow your knowledge of Islam, a little every day.",
-    "ctaPrimary": "Join Waitlist",
-    "ctaSecondary": "Learn More",
-    "comingSoon": "Coming Soon",
-    "appStatus": "Join our WhatsApp community"
+    "eyebrow": "Guided Training · Built for Men",
+    "headlineLine1": "Kegel Exercises",
+    "headlineLine2": "For Men,",
+    "headlineLine3": "Made Simple.",
+    "body": "Defy guides you through short daily Kegel sessions and helps you build a consistent pelvic floor routine.",
+    "ctaIos": "Download on iOS",
+    "ctaAndroid": "Get it on Google Play",
+    "ctaHowItWorks": "See how it works",
+    "note": "Free to start · Private & Discreet",
+    "imageAlt": "Defy app with guided Kegel exercises for men"
   },
   "features": {
-    "heading": "Grow your Deen, one swipe at a time",
-    "subtitle": "Bite-sized, scholar-approved Islamic learning that turns spare minutes into real knowledge",
+    "eyebrow": "Features",
+    "headingLine1": "Everything you need",
+    "headingLine2": "to train smarter.",
     "learnMore": "Learn more",
-    "aiCompanion": {
-      "title": "A Feed Worth Scrolling",
-      "description": "Swap doom-scrolling for a swipeable feed of short Islamic lessons. Every swipe teaches you something real about your Deen."
-    },
-    "dailyChecklist": {
-      "title": "Learn Through Play",
-      "description": "Bite-sized lessons, daily streaks, levels, and quick quizzes turn growing your Deen into a daily habit you actually keep."
-    },
-    "letters": {
-      "title": "Scholar-Approved, Always",
-      "description": "Every lesson is rooted in the Quran and authentic Sunnah and reviewed by qualified scholars — knowledge you can trust, not algorithm guesswork."
+    "gotIt": "Got it",
+    "closeModal": "Close modal",
+    "items": {
+      "guidedWorkouts": {
+        "title": "Guided Kegel Workouts",
+        "description": "Follow guided daily Kegel sessions designed for men and build a repeatable pelvic floor routine.",
+        "fullDescription": "Defy gives you short, structured sessions to make daily pelvic floor practice easier to follow. The App Store listing has the current workout modes and feature availability."
+      },
+      "dailyHabits": {
+        "title": "Daily Habits and Challenges",
+        "description": "Pair your workouts with daily challenges and motivation to help you stay consistent.",
+        "fullDescription": "The app combines Kegel practice with motivational prompts and simple habit challenges. Use them to make the routine easier to return to each day."
+      },
+      "expertEducation": {
+        "title": "Men’s Health Resources",
+        "description": "Read practical resources on pelvic floor training and men’s wellness in plain English.",
+        "fullDescription": "Defy includes educational resources to help you understand and stick with your routine. This content is informational and is not a substitute for advice from a qualified healthcare professional."
+      }
+    }
+  },
+  "guides": {
+    "eyebrow": "Learn first",
+    "heading": "A clearer start to pelvic floor training.",
+    "body": "Learn the basics, check the evidence, and understand the role of relaxation before choosing a routine.",
+    "englishNote": "These guides are in English.",
+    "explore": "Explore the Kegel guide",
+    "items": {
+      "kegels-for-men": {
+        "title": "Start with the basics",
+        "description": "What Kegels are, how to find the muscles, and when to ask for help."
+      },
+      "pelvic-floor-muscles": {
+        "title": "Understand the anatomy",
+        "description": "A map of the male pelvic floor and the different jobs its muscles do."
+      },
+      "7-kegel-exercises-for-men": {
+        "title": "Check your exercise technique",
+        "description": "Contraction, breathing, full release, and common training mistakes."
+      },
+      "benefits-of-kegels-for-men": {
+        "title": "Read the evidence",
+        "description": "What studies suggest, their limitations, and why results vary."
+      },
+      "how-to-relax-pelvic-floor-muscles": {
+        "title": "Learn about relaxation",
+        "description": "Why more squeezing is not always the answer, especially with pain."
+      }
     }
   },
   "cta": {
-    "badge": "Coming Soon to iOS & Android",
-    "heading": "Trade doom-scrolling for your Deen",
-    "subtitle": "Join our WhatsApp community and be the first to know when DeenUp launches",
-    "joinWaitlist": "Join Waitlist",
-    "downloadIOS": "Download on iOS",
-    "downloadAndroid": "Download on Android",
-    "comingSoonText": "Join our community on WhatsApp"
-  },
-  "testimonials": {
-    "heading": "Stories from learners",
-    "subtitle": "See how DeenUp is helping Muslims learn and grow every day",
-    "readMore": "Read full story",
-    "showLess": "Show less"
+    "eyebrow": "Available Now on iOS and Android",
+    "headingLine1": "Start your kegel",
+    "headingLine2": "journey today.",
+    "body": "Build a consistent pelvic floor routine with guided Kegel sessions designed for men.",
+    "ctaIos": "Download on iOS — Free",
+    "ctaAndroid": "Get it on Google Play",
+    "note": "Free to download · Full access requires a subscription."
   },
   "faq": {
-    "badge": "FAQ",
-    "heading": "Frequently asked questions",
-    "subtitle": "Everything you need to know about DeenUp",
-    "stillHaveQuestions": "Still have questions?",
-    "contactSupport": "Join Waitlist",
+    "eyebrow": "FAQ",
+    "headingLine1": "Common questions",
+    "headingLine2": "answered.",
+    "stillQuestions": "Still have questions?",
+    "responseTime": "We typically respond within 24 hours.",
+    "contactSupport": "Contact Support",
     "items": [
       {
-        "question": "What exactly is DeenUp?",
-        "answer": "DeenUp is a learning app for Islamic knowledge — think Duolingo for your Deen, or a halal alternative to endless TikTok scrolling. Instead of doom-scrolling, you swipe through short, scholar-approved lessons, take quick quizzes, and build a daily learning streak. It's designed to make growing your Islamic knowledge fun, simple, and consistent."
+        "question": "What are Kegel exercises for men?",
+        "answer": "Kegel exercises involve tightening and relaxing the pelvic floor muscles. They can help with bladder and bowel control, and may support sexual function. Learning to use the right muscles matters; a healthcare professional or pelvic floor therapist can help if you are unsure.",
+        "sourceLabel": "NIDDK guide to Kegel exercises"
       },
       {
-        "question": "How is the content kept Islamically accurate?",
-        "answer": "Every lesson on DeenUp is rooted in the Quran and authentic Sunnah and reviewed by qualified scholars before it goes live. We don't use AI or algorithms to generate religious rulings — technology only helps us organize and deliver trustworthy knowledge. You can always see the sources behind what you learn."
+        "question": "How does Defy help me practice?",
+        "answer": "Defy provides guided daily Kegel sessions, habit challenges, and men’s health resources to help you build a routine. The App Store listing has the current feature details.",
+        "sourceLabel": "Defy on the App Store"
       },
       {
-        "question": "Is DeenUp good for new Muslims and reverts?",
-        "answer": "Absolutely. DeenUp meets you wherever you are. Bite-sized lessons start from the fundamentals and build up gradually, so new Muslims and reverts can learn the basics at their own pace — without judgment and without feeling overwhelmed. Lifelong Muslims will find plenty to deepen their knowledge too."
+        "question": "Can Defy treat erectile dysfunction?",
+        "answer": "Defy is a wellness app, not a diagnosis or medical treatment. Pelvic floor exercises may help some people, but results vary. If you have persistent erection problems, pelvic pain, or other symptoms, speak with a qualified healthcare professional.",
+        "sourceLabel": ""
       },
       {
-        "question": "How is this different from just scrolling social media?",
-        "answer": "DeenUp gives you the same easy, swipeable experience you're used to — but every swipe leaves you with beneficial knowledge instead of wasted time. There's no doom-scrolling, no harmful content, and no algorithm pulling you toward distraction. It's screen time that actually grows your Deen."
+        "question": "How often should I do Kegel exercises?",
+        "answer": "The right plan depends on your needs. More repetitions are not always better; overdoing pelvic floor exercises can cause strain. Ask a healthcare professional for advice if you are treating symptoms or recovering from surgery.",
+        "sourceLabel": "NIDDK exercise guidance"
       },
       {
-        "question": "What languages does DeenUp support?",
-        "answer": "DeenUp currently supports English and Arabic, with the interface automatically switching to a right-to-left (RTL) layout for Arabic. More languages may be added as the community grows."
+        "question": "Is Defy free?",
+        "answer": "Defy is free to download. Access to all app features requires an active subscription. Check the App Store for current prices and terms before subscribing.",
+        "sourceLabel": "Current App Store terms"
       }
     ]
+  },
+  "blog": {
+    "title": "All Posts",
+    "englishNote": "Our articles are currently available in English only.",
+    "searchPlaceholder": "Search articles",
+    "noPosts": "No posts found."
+  },
+  "legal": {
+    "englishNote": "This document is provided in English. The English version is the binding version.",
+    "privacyHeading": "Privacy Policy",
+    "termsHeading": "Terms of Service",
+    "lastUpdated": "Last updated"
   }
 }

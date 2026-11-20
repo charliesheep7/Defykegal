@@ -6,9 +6,14 @@ import siteMetadata from '@/data/siteMetadata'
 import headerNavLinks from '@/data/headerNavLinks'
 import Link from './Link'
 import MobileNav from './MobileNav'
+import LocaleSwitcher from './LocaleSwitcher'
+import { useLocale } from './hooks/useLocale'
+import { dictionaries } from 'lib/dictionaries'
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false)
+  const { currentLang } = useLocale()
+  const t = dictionaries[currentLang].nav
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20)
@@ -44,7 +49,7 @@ const Header = () => {
                   href={link.href}
                   className="rounded-lg px-4 py-2 text-sm font-medium text-white/60 transition-all duration-200 hover:bg-white/5 hover:text-white"
                 >
-                  {link.title}
+                  {t[link.key]}
                 </Link>
               ))}
           </div>
@@ -54,8 +59,9 @@ const Header = () => {
             rel="noopener noreferrer"
             className="hidden rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm font-semibold text-white transition-all duration-200 hover:bg-white/10 sm:inline-flex"
           >
-            Download
+            {t.download}
           </a>
+          <LocaleSwitcher />
           <MobileNav />
         </div>
       </div>

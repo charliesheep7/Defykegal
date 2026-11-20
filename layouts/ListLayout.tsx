@@ -19,6 +19,8 @@ interface ListLayoutProps {
   title: string
   initialDisplayPosts?: CoreContent<Blog>[]
   pagination?: PaginationProps
+  labels?: { searchPlaceholder?: string; noPosts?: string }
+  dateLocale?: string
 }
 
 function Pagination({ totalPages, currentPage }: PaginationProps) {
@@ -69,7 +71,10 @@ export default function ListLayout({
   title,
   initialDisplayPosts = [],
   pagination,
+  labels,
+  dateLocale = siteMetadata.locale,
 }: ListLayoutProps) {
+  const searchLabel = labels?.searchPlaceholder ?? 'Search articles'
   const [searchValue, setSearchValue] = useState('')
   const filteredBlogPosts = posts.filter((post) => {
     const searchContent = post.title + post.summary + post.tags?.join(' ')
@@ -92,12 +97,12 @@ export default function ListLayout({
           </h1>
           <div className="relative max-w-lg">
             <label>
-              <span className="sr-only">Search articles</span>
+              <span className="sr-only">{searchLabel}</span>
               <input
-                aria-label="Search articles"
+                aria-label={searchLabel}
                 type="text"
                 onChange={(e) => setSearchValue(e.target.value)}
-                placeholder="Search articles"
+                placeholder={searchLabel}
                 className="block w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white placeholder:text-white/30 focus:border-white/20 focus:outline-none"
               />
             </label>
@@ -118,7 +123,7 @@ export default function ListLayout({
           </div>
         </div>
         <ul>
-          {!filteredBlogPosts.length && 'No posts found.'}
+          {!filteredBlogPosts.length && (labels?.noPosts ?? 'No posts found.')}
           {displayPosts.map((post) => {
             const { path, date, title, summary, images } = post
             return (
@@ -140,7 +145,7 @@ export default function ListLayout({
                         <dl>
                           <dt className="sr-only">Published on</dt>
                           <dd className="text-sm font-medium text-white/30">
-                            <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
+                            <time dateTime={date}>{formatDate(date, dateLocale)}</time>
                           </dd>
                         </dl>
                         <div>

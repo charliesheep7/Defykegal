@@ -5,11 +5,17 @@ import FAQ from '@/components/landing/FAQ'
 import Guides from '@/components/landing/Guides'
 import { genPageMetadata } from 'app/seo'
 import siteMetadata from '@/data/siteMetadata'
+import { languageAlternates } from 'lib/i18n'
 
 export const metadata = genPageMetadata({
   title: 'Defy — Kegel Exercises for Men',
   description:
     'Build a pelvic floor routine with Defy, the guided Kegel exercise app for men. Explore short daily workouts and download the app on iOS and Android.',
+  alternates: {
+    canonical: './',
+    languages: languageAlternates('/'),
+    types: { 'application/rss+xml': `${siteMetadata.siteUrl}/feed.xml` },
+  },
 })
 
 export default async function Page() {
