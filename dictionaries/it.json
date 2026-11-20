@@ -1,0 +1,155 @@
+{
+  "meta": {
+    "homeTitle": "Defy – Esercizi di Kegel per uomini",
+    "homeDescription": "Crea una routine per il tuo pavimento pelvico con Defy, l’app di esercizi di Kegel guidati per uomini. Scopri brevi allenamenti quotidiani e scarica l’app su iOS e Android.",
+    "blogTitle": "Blog",
+    "blogDescription": "Le guide del team Defy su esercizi di Kegel per uomini, salute del pavimento pelvico, disfunzione erettile e sessualità maschile. Articoli in inglese.",
+    "privacyTitle": "Informativa sulla privacy",
+    "privacyDescription": "Scopri quali dati personali raccoglie Defy, come vengono usati e quali misure li proteggono.",
+    "termsTitle": "Termini di servizio",
+    "termsDescription": "Le regole, le linee guida sull’uso consentito e le condizioni legali che regolano il tuo utilizzo dell’app Defy."
+  },
+  "nav": {
+    "home": "Home",
+    "kegelGuide": "Guida Kegel",
+    "blog": "Blog",
+    "about": "Chi siamo",
+    "support": "Assistenza",
+    "download": "Scarica",
+    "selectLanguage": "Seleziona la lingua",
+    "toggleMenu": "Apri o chiudi il menu"
+  },
+  "footer": {
+    "tagline": "Allenamento di Kegel guidato per uomini, con risorse sulla salute e fonti che puoi verificare. In ogni articolo trovi l’autore e lo stato di revisione.",
+    "kegelGuide": "Guida Kegel",
+    "about": "Chi siamo",
+    "blog": "Blog",
+    "editorialPolicy": "Linee guida editoriali",
+    "contact": "Contatti",
+    "privacy": "Privacy",
+    "terms": "Termini",
+    "disclaimer": "Tutti i contenuti hanno solo scopo informativo e non costituiscono un parere medico."
+  },
+  "hero": {
+    "eyebrow": "Allenamento guidato · Pensato per gli uomini",
+    "headlineLine1": "Esercizi di Kegel",
+    "headlineLine2": "per uomini,",
+    "headlineLine3": "senza complicazioni.",
+    "body": "Defy ti guida in brevi sessioni di Kegel quotidiane e ti aiuta a costruire una routine costante per il pavimento pelvico.",
+    "ctaIos": "Scarica su iOS",
+    "ctaAndroid": "Disponibile su Google Play",
+    "ctaHowItWorks": "Scopri come funziona",
+    "note": "Inizia gratis · Privato e discreto",
+    "imageAlt": "L’app Defy con esercizi di Kegel guidati per uomini"
+  },
+  "features": {
+    "eyebrow": "Funzionalità",
+    "headingLine1": "Tutto ciò che ti serve",
+    "headingLine2": "per allenarti meglio.",
+    "learnMore": "Scopri di più",
+    "gotIt": "Ho capito",
+    "closeModal": "Chiudi la finestra",
+    "items": {
+      "guidedWorkouts": {
+        "title": "Allenamenti di Kegel guidati",
+        "description": "Segui sessioni quotidiane di Kegel guidate, pensate per gli uomini, e costruisci una routine per il pavimento pelvico facile da ripetere.",
+        "fullDescription": "Defy ti offre sessioni brevi e strutturate per rendere più facile seguire l’allenamento quotidiano del pavimento pelvico. Nella pagina dell’App Store trovi le modalità di allenamento e le funzionalità attualmente disponibili."
+      },
+      "dailyHabits": {
+        "title": "Abitudini e sfide quotidiane",
+        "description": "Abbina i tuoi allenamenti a sfide quotidiane e a un po’ di motivazione per aiutarti a essere costante.",
+        "fullDescription": "L’app unisce gli esercizi di Kegel a messaggi motivazionali e semplici sfide per creare abitudini. Usali per tornare più facilmente alla tua routine ogni giorno."
+      },
+      "expertEducation": {
+        "title": "Risorse sulla salute maschile",
+        "description": "Leggi risorse pratiche e chiare sull’allenamento del pavimento pelvico e sul benessere maschile.",
+        "fullDescription": "Defy include contenuti educativi per aiutarti a capire la tua routine e a mantenerla. Questi contenuti sono informativi e non sostituiscono il parere di un professionista sanitario qualificato."
+      }
+    }
+  },
+  "guides": {
+    "eyebrow": "Prima, informati",
+    "heading": "Un inizio più chiaro per allenare il pavimento pelvico.",
+    "body": "Impara le basi, guarda cosa dicono gli studi e capisci il ruolo del rilassamento prima di scegliere una routine.",
+    "englishNote": "Queste guide sono in inglese.",
+    "explore": "Esplora la guida Kegel",
+    "items": {
+      "kegels-for-men": {
+        "title": "Parti dalle basi",
+        "description": "Cosa sono gli esercizi di Kegel, come trovare i muscoli giusti e quando chiedere aiuto."
+      },
+      "pelvic-floor-muscles": {
+        "title": "Capisci l’anatomia",
+        "description": "Una mappa del pavimento pelvico maschile e dei diversi compiti dei suoi muscoli."
+      },
+      "7-kegel-exercises-for-men": {
+        "title": "Controlla la tua tecnica",
+        "description": "Contrazione, respirazione, rilascio completo ed errori comuni nell’allenamento."
+      },
+      "benefits-of-kegels-for-men": {
+        "title": "Leggi cosa dicono gli studi",
+        "description": "Cosa suggeriscono gli studi, i loro limiti e perché i risultati variano."
+      },
+      "how-to-relax-pelvic-floor-muscles": {
+        "title": "Impara a rilassare",
+        "description": "Perché stringere di più non è sempre la risposta, soprattutto in caso di dolore."
+      }
+    }
+  },
+  "cta": {
+    "eyebrow": "Ora disponibile su iOS e Android",
+    "headingLine1": "Inizia il tuo allenamento",
+    "headingLine2": "Kegel oggi stesso.",
+    "body": "Costruisci una routine costante per il pavimento pelvico con sessioni di Kegel guidate, pensate per gli uomini.",
+    "ctaIos": "Scarica su iOS – Gratis",
+    "ctaAndroid": "Disponibile su Google Play",
+    "note": "Download gratuito · L’accesso completo richiede un abbonamento."
+  },
+  "faq": {
+    "eyebrow": "Domande frequenti",
+    "headingLine1": "I tuoi dubbi,",
+    "headingLine2": "chiariti.",
+    "stillQuestions": "Hai altre domande?",
+    "responseTime": "Di solito rispondiamo entro 24 ore.",
+    "contactSupport": "Contatta l’assistenza",
+    "items": [
+      {
+        "question": "Cosa sono gli esercizi di Kegel per uomini?",
+        "answer": "Gli esercizi di Kegel consistono nel contrarre e rilassare i muscoli del pavimento pelvico. Possono aiutare nel controllo di vescica e intestino e potrebbero favorire la funzione sessuale. È importante usare i muscoli giusti: se hai dubbi, un professionista sanitario o un fisioterapista del pavimento pelvico può aiutarti.",
+        "sourceLabel": "Guida del NIDDK agli esercizi di Kegel (in inglese)"
+      },
+      {
+        "question": "Come mi aiuta Defy ad allenarmi?",
+        "answer": "Defy offre sessioni quotidiane di Kegel guidate, sfide sulle abitudini e risorse sulla salute maschile per aiutarti a costruire una routine. Nella pagina dell’App Store trovi i dettagli aggiornati sulle funzionalità.",
+        "sourceLabel": "Defy sull’App Store"
+      },
+      {
+        "question": "Defy può curare la disfunzione erettile?",
+        "answer": "Defy è un’app di benessere, non uno strumento di diagnosi né un trattamento medico. Gli esercizi per il pavimento pelvico possono aiutare alcune persone, ma i risultati variano. Se hai problemi di erezione persistenti, dolore pelvico o altri sintomi, parlane con un professionista sanitario qualificato.",
+        "sourceLabel": ""
+      },
+      {
+        "question": "Quanto spesso dovrei fare gli esercizi di Kegel?",
+        "answer": "Il piano giusto dipende dalle tue esigenze. Più ripetizioni non significa sempre meglio; esagerare con gli esercizi per il pavimento pelvico può causare affaticamento. Chiedi consiglio a un professionista sanitario se stai trattando dei sintomi o ti stai riprendendo da un intervento chirurgico.",
+        "sourceLabel": "Indicazioni del NIDDK sull’esercizio (in inglese)"
+      },
+      {
+        "question": "Defy è gratis?",
+        "answer": "Defy si scarica gratis. Per accedere a tutte le funzionalità dell’app serve un abbonamento attivo. Controlla i prezzi e le condizioni attuali sull’App Store prima di abbonarti.",
+        "sourceLabel": "Condizioni attuali sull’App Store"
+      }
+    ]
+  },
+  "blog": {
+    "title": "Tutti gli articoli",
+    "englishNote": "Per ora i nostri articoli sono disponibili solo in inglese.",
+    "searchPlaceholder": "Cerca articoli",
+    "noPosts": "Nessun articolo trovato."
+  },
+  "legal": {
+    "englishNote": "Questo documento è disponibile in inglese. La versione inglese è quella vincolante.",
+    "privacyHeading": "Informativa sulla privacy",
+    "termsHeading": "Termini di servizio",
+    "lastUpdated": "Ultimo aggiornamento"
+  }
+}

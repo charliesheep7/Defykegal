@@ -7,19 +7,14 @@ import Link from './Link'
 import headerNavLinks from '@/data/headerNavLinks'
 import { useLocale } from './hooks/useLocale'
 import siteMetadata from '@/data/siteMetadata'
+import { dictionaries } from 'lib/dictionaries'
 
 const MobileNav = () => {
   const [navShow, setNavShow] = useState(false)
   const navRef = useRef(null)
   const { currentLang } = useLocale()
 
-  const getNavText = (key: string) => {
-    const translations: Record<string, Record<string, string>> = {
-      en: { home: 'Home', blog: 'Blog', support: 'Support' },
-      ar: { home: 'الرئيسية', blog: 'المدونة', support: 'الدعم' },
-    }
-    return translations[currentLang]?.[key] || key
-  }
+  const t = dictionaries[currentLang].nav
 
   const onToggleNav = () => {
     setNavShow((status) => {
@@ -38,7 +33,7 @@ const MobileNav = () => {
 
   return (
     <>
-      <button aria-label="Toggle Menu" onClick={onToggleNav} className="sm:hidden">
+      <button aria-label={t.toggleMenu} onClick={onToggleNav} className="sm:hidden">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
@@ -89,7 +84,7 @@ const MobileNav = () => {
                     className="mb-4 py-2 pr-4 text-2xl font-bold tracking-tight text-white/70 transition-colors duration-200 hover:text-white"
                     onClick={onToggleNav}
                   >
-                    {getNavText(link.title.toLowerCase())}
+                    {t[link.key]}
                   </Link>
                 ))}
                 <div className="mt-6">
@@ -100,14 +95,14 @@ const MobileNav = () => {
                     className="rounded-full bg-white px-8 py-3 text-base font-bold text-black transition-opacity duration-200 hover:opacity-90"
                     onClick={onToggleNav}
                   >
-                    Download
+                    {t.download}
                   </a>
                 </div>
               </nav>
 
               <button
                 className="fixed top-7 right-4 z-80 flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-white/50 transition-colors hover:border-white/30 hover:text-white"
-                aria-label="Toggle Menu"
+                aria-label={t.toggleMenu}
                 onClick={onToggleNav}
               >
                 <svg

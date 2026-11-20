@@ -1,0 +1,155 @@
+{
+  "meta": {
+    "homeTitle": "Defy – Kegelübungen für Männer",
+    "homeDescription": "Bau dir mit Defy, der App für geführte Kegelübungen für Männer, eine Beckenboden-Routine auf. Entdecke kurze tägliche Workouts und lade die App für iOS und Android herunter.",
+    "blogTitle": "Blog",
+    "blogDescription": "Ratgeber des Defy-Teams zu Kegelübungen für Männer, Beckenbodengesundheit, Erektionsstörungen und männlicher Sexualität. Die Artikel sind auf Englisch.",
+    "privacyTitle": "Datenschutzerklärung",
+    "privacyDescription": "Erfahre, welche personenbezogenen Daten Defy erhebt, wie sie verwendet werden und wie sie geschützt sind.",
+    "termsTitle": "Nutzungsbedingungen",
+    "termsDescription": "Die Regeln, Nutzungsrichtlinien und rechtlichen Bedingungen, die für deine Nutzung der Defy-App gelten."
+  },
+  "nav": {
+    "home": "Startseite",
+    "kegelGuide": "Kegel-Guide",
+    "blog": "Blog",
+    "about": "Über uns",
+    "support": "Hilfe",
+    "download": "Herunterladen",
+    "selectLanguage": "Sprache wählen",
+    "toggleMenu": "Menü öffnen oder schließen"
+  },
+  "footer": {
+    "tagline": "Geführtes Kegeltraining für Männer, mit Gesundheitsinfos und Quellen, die du selbst prüfen kannst. Autorenschaft und Prüfstatus findest du bei jedem Artikel.",
+    "kegelGuide": "Kegel-Guide",
+    "about": "Über uns",
+    "blog": "Blog",
+    "editorialPolicy": "Redaktionelle Richtlinien",
+    "contact": "Kontakt",
+    "privacy": "Datenschutz",
+    "terms": "Nutzungsbedingungen",
+    "disclaimer": "Alle Inhalte dienen ausschließlich der Information und stellen keine medizinische Beratung dar."
+  },
+  "hero": {
+    "eyebrow": "Geführtes Training · Für Männer gemacht",
+    "headlineLine1": "Kegelübungen",
+    "headlineLine2": "für Männer –",
+    "headlineLine3": "ganz einfach.",
+    "body": "Defy führt dich durch kurze tägliche Kegel-Einheiten und hilft dir, eine feste Beckenboden-Routine aufzubauen.",
+    "ctaIos": "Für iOS herunterladen",
+    "ctaAndroid": "Jetzt bei Google Play",
+    "ctaHowItWorks": "So funktioniert’s",
+    "note": "Kostenlos starten · Privat & diskret",
+    "imageAlt": "Defy-App mit geführten Kegelübungen für Männer"
+  },
+  "features": {
+    "eyebrow": "Funktionen",
+    "headingLine1": "Alles, was du brauchst,",
+    "headingLine2": "um smarter zu trainieren.",
+    "learnMore": "Mehr erfahren",
+    "gotIt": "Alles klar",
+    "closeModal": "Fenster schließen",
+    "items": {
+      "guidedWorkouts": {
+        "title": "Geführte Kegel-Workouts",
+        "description": "Folge geführten täglichen Kegel-Einheiten für Männer und bau dir eine Beckenboden-Routine auf, die du jeden Tag wiederholen kannst.",
+        "fullDescription": "Defy gibt dir kurze, strukturierte Einheiten, damit dir das tägliche Beckenbodentraining leichter fällt. Die aktuellen Trainingsmodi und verfügbaren Funktionen findest du im App Store."
+      },
+      "dailyHabits": {
+        "title": "Tägliche Gewohnheiten und Challenges",
+        "description": "Kombiniere deine Workouts mit täglichen Challenges und Motivation, damit du dranbleibst.",
+        "fullDescription": "Die App verbindet Kegelübungen mit motivierenden Impulsen und einfachen Gewohnheits-Challenges. So fällt es dir leichter, jeden Tag zu deiner Routine zurückzukehren."
+      },
+      "expertEducation": {
+        "title": "Infos zur Männergesundheit",
+        "description": "Lies praktische, verständliche Infos zum Beckenbodentraining und zur Gesundheit von Männern.",
+        "fullDescription": "Defy enthält Lerninhalte, die dir helfen, deine Routine zu verstehen und dranzubleiben. Diese Inhalte dienen nur der Information und ersetzen keine Beratung durch qualifiziertes medizinisches Fachpersonal."
+      }
+    }
+  },
+  "guides": {
+    "eyebrow": "Erst verstehen",
+    "heading": "Ein klarerer Einstieg ins Beckenbodentraining.",
+    "body": "Lerne die Grundlagen, prüf die Studienlage und versteh, welche Rolle Entspannung spielt – bevor du dich für eine Routine entscheidest.",
+    "englishNote": "Diese Ratgeber sind auf Englisch.",
+    "explore": "Zum Kegel-Guide",
+    "items": {
+      "kegels-for-men": {
+        "title": "Starte mit den Grundlagen",
+        "description": "Was Kegelübungen sind, wie du die richtigen Muskeln findest und wann du dir Hilfe holen solltest."
+      },
+      "pelvic-floor-muscles": {
+        "title": "Die Anatomie verstehen",
+        "description": "Eine Übersicht über den männlichen Beckenboden und die verschiedenen Aufgaben seiner Muskeln."
+      },
+      "7-kegel-exercises-for-men": {
+        "title": "Deine Technik checken",
+        "description": "Anspannen, Atmen, vollständiges Loslassen und typische Trainingsfehler."
+      },
+      "benefits-of-kegels-for-men": {
+        "title": "Die Studienlage kennen",
+        "description": "Was Studien nahelegen, wo ihre Grenzen liegen und warum die Ergebnisse unterschiedlich ausfallen."
+      },
+      "how-to-relax-pelvic-floor-muscles": {
+        "title": "Entspannung verstehen",
+        "description": "Warum stärkeres Anspannen nicht immer die Lösung ist – besonders bei Schmerzen."
+      }
+    }
+  },
+  "cta": {
+    "eyebrow": "Jetzt für iOS und Android",
+    "headingLine1": "Starte dein Kegeltraining",
+    "headingLine2": "noch heute.",
+    "body": "Bau dir mit geführten Kegel-Einheiten für Männer eine feste Beckenboden-Routine auf.",
+    "ctaIos": "Für iOS herunterladen – kostenlos",
+    "ctaAndroid": "Jetzt bei Google Play",
+    "note": "Kostenloser Download · Voller Zugriff nur mit Abo."
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "headingLine1": "Häufige Fragen,",
+    "headingLine2": "klar beantwortet.",
+    "stillQuestions": "Noch Fragen?",
+    "responseTime": "Wir antworten in der Regel innerhalb von 24 Stunden.",
+    "contactSupport": "Support kontaktieren",
+    "items": [
+      {
+        "question": "Was sind Kegelübungen für Männer?",
+        "answer": "Bei Kegelübungen spannst du die Beckenbodenmuskulatur an und entspannst sie wieder. Sie können bei der Kontrolle von Blase und Darm helfen und die Sexualfunktion möglicherweise unterstützen. Wichtig ist, die richtigen Muskeln zu nutzen – wenn du unsicher bist, können dir eine Ärztin, ein Arzt oder eine Beckenboden-Physiotherapie helfen.",
+        "sourceLabel": "NIDDK-Leitfaden zu Kegelübungen (Englisch)"
+      },
+      {
+        "question": "Wie hilft mir Defy beim Üben?",
+        "answer": "Defy bietet dir geführte tägliche Kegel-Einheiten, Gewohnheits-Challenges und Infos zur Männergesundheit, damit du eine Routine aufbauen kannst. Die aktuellen Funktionen findest du im App Store.",
+        "sourceLabel": "Defy im App Store"
+      },
+      {
+        "question": "Kann Defy Erektionsstörungen behandeln?",
+        "answer": "Defy ist eine Wellness-App und weder eine Diagnose noch eine medizinische Behandlung. Beckenbodenübungen können manchen Menschen helfen, aber die Ergebnisse sind unterschiedlich. Wenn du anhaltende Erektionsprobleme, Schmerzen im Beckenbereich oder andere Beschwerden hast, sprich mit qualifiziertem medizinischem Fachpersonal.",
+        "sourceLabel": ""
+      },
+      {
+        "question": "Wie oft sollte ich Kegelübungen machen?",
+        "answer": "Der richtige Plan hängt davon ab, was du brauchst. Mehr Wiederholungen sind nicht immer besser; wer den Beckenboden übertrainiert, riskiert eine Überlastung. Lass dich ärztlich beraten, wenn du Beschwerden behandelst oder dich von einer Operation erholst.",
+        "sourceLabel": "NIDDK-Hinweise zum Training (Englisch)"
+      },
+      {
+        "question": "Ist Defy kostenlos?",
+        "answer": "Defy kannst du kostenlos herunterladen. Für den Zugriff auf alle Funktionen der App brauchst du ein aktives Abo. Prüf vor dem Abschluss die aktuellen Preise und Bedingungen im App Store.",
+        "sourceLabel": "Aktuelle Bedingungen im App Store"
+      }
+    ]
+  },
+  "blog": {
+    "title": "Alle Artikel",
+    "englishNote": "Unsere Artikel gibt es derzeit nur auf Englisch.",
+    "searchPlaceholder": "Artikel durchsuchen",
+    "noPosts": "Keine Artikel gefunden."
+  },
+  "legal": {
+    "englishNote": "Dieses Dokument ist nur auf Englisch verfügbar. Maßgeblich ist die englische Fassung.",
+    "privacyHeading": "Datenschutzerklärung",
+    "termsHeading": "Nutzungsbedingungen",
+    "lastUpdated": "Zuletzt aktualisiert"
+  }
+}

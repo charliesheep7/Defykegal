@@ -2,22 +2,16 @@
 
 import { usePathname } from 'next/navigation'
 import { useEffect } from 'react'
+import { getLocaleFromPath } from 'lib/i18n'
 
+// The site shares one root layout, so the exported HTML says lang="en".
+// Keep <html lang> in sync with the URL's locale (all supported locales are LTR).
 export default function RTLHandler() {
-  const pathname = usePathname()
+  const pathname = usePathname() || '/'
 
   useEffect(() => {
-    // Check if current path is Arabic
-    const isArabic = pathname.startsWith('/ar/') || pathname === '/ar'
-
-    // Update HTML attributes
-    if (isArabic) {
-      document.documentElement.setAttribute('lang', 'ar')
-      document.documentElement.setAttribute('dir', 'rtl')
-    } else {
-      document.documentElement.setAttribute('lang', 'en')
-      document.documentElement.setAttribute('dir', 'ltr')
-    }
+    document.documentElement.setAttribute('lang', getLocaleFromPath(pathname))
+    document.documentElement.setAttribute('dir', 'ltr')
   }, [pathname])
 
   return null

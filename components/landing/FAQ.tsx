@@ -2,44 +2,20 @@
 import { useState } from 'react'
 import { ChevronDown } from 'lucide-react'
 import siteMetadata from '@/data/siteMetadata'
+import type { Dictionary } from '@/types/dictionary'
+import en from '../../dictionaries/en.json'
 
-const faqs = [
-  {
-    question: 'What are Kegel exercises for men?',
-    answer:
-      'Kegel exercises involve tightening and relaxing the pelvic floor muscles. They can help with bladder and bowel control, and may support sexual function. Learning to use the right muscles matters; a healthcare professional or pelvic floor therapist can help if you are unsure.',
-    source: 'https://www.niddk.nih.gov/health-information/urologic-diseases/kegel-exercises',
-    sourceLabel: 'NIDDK guide to Kegel exercises',
-  },
-  {
-    question: 'How does Defy help me practice?',
-    answer:
-      'Defy provides guided daily Kegel sessions, habit challenges, and men’s health resources to help you build a routine. The App Store listing has the current feature details.',
-    source: siteMetadata.appStoreUrl,
-    sourceLabel: 'Defy on the App Store',
-  },
-  {
-    question: 'Can Defy treat erectile dysfunction?',
-    answer:
-      'Defy is a wellness app, not a diagnosis or medical treatment. Pelvic floor exercises may help some people, but results vary. If you have persistent erection problems, pelvic pain, or other symptoms, speak with a qualified healthcare professional.',
-  },
-  {
-    question: 'How often should I do Kegel exercises?',
-    answer:
-      'The right plan depends on your needs. More repetitions are not always better; overdoing pelvic floor exercises can cause strain. Ask a healthcare professional for advice if you are treating symptoms or recovering from surgery.',
-    source: 'https://www.niddk.nih.gov/health-information/urologic-diseases/kegel-exercises',
-    sourceLabel: 'NIDDK exercise guidance',
-  },
-  {
-    question: 'Is Defy free?',
-    answer:
-      'Defy is free to download. Access to all app features requires an active subscription. Check the App Store for current prices and terms before subscribing.',
-    source: siteMetadata.appStoreUrl,
-    sourceLabel: 'Current App Store terms',
-  },
+// Source links are shared by every locale; the copy comes from the dictionary.
+const faqSources: (string | undefined)[] = [
+  'https://www.niddk.nih.gov/health-information/urologic-diseases/kegel-exercises',
+  siteMetadata.appStoreUrl,
+  undefined,
+  'https://www.niddk.nih.gov/health-information/urologic-diseases/kegel-exercises',
+  siteMetadata.appStoreUrl,
 ]
 
-export default function FAQ() {
+export default function FAQ({ dict = en.faq }: { dict?: Dictionary['faq'] }) {
+  const faqs = dict.items.map((item, i) => ({ ...item, source: faqSources[i] }))
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null)
 
   const faqSchema = {
@@ -64,11 +40,11 @@ export default function FAQ() {
       <div className="mx-auto max-w-3xl px-4 sm:px-6">
         {/* Section header */}
         <div className="mb-16">
-          <span className="eyebrow">FAQ</span>
+          <span className="eyebrow">{dict.eyebrow}</span>
           <h2 className="text-display mt-4 font-bold text-white">
-            Common questions
+            {dict.headingLine1}
             <br />
-            <span className="text-white/40">answered.</span>
+            <span className="text-white/40">{dict.headingLine2}</span>
           </h2>
         </div>
 
@@ -105,7 +81,7 @@ export default function FAQ() {
                 {isExpanded && (
                   <div className="animate-fade-in pb-6">
                     <p className="text-sm leading-relaxed text-white/50">{faq.answer}</p>
-                    {'source' in faq && faq.source && (
+                    {faq.source && faq.sourceLabel && (
                       <a
                         href={faq.source}
                         target="_blank"
@@ -124,13 +100,13 @@ export default function FAQ() {
 
         {/* Contact */}
         <div className="mt-16 rounded-2xl border border-white/10 p-8 text-center">
-          <p className="mb-2 text-sm font-semibold text-white/70">Still have questions?</p>
-          <p className="mb-6 text-xs text-white/30">We typically respond within 24 hours.</p>
+          <p className="mb-2 text-sm font-semibold text-white/70">{dict.stillQuestions}</p>
+          <p className="mb-6 text-xs text-white/30">{dict.responseTime}</p>
           <a
             href="mailto:support@defykegel.com"
             className="inline-flex items-center gap-2 rounded-full border border-white/20 px-8 py-3 text-sm font-semibold text-white/70 transition-all duration-200 hover:border-white/40 hover:text-white"
           >
-            Contact Support
+            {dict.contactSupport}
           </a>
         </div>
       </div>

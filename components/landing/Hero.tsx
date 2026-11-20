@@ -1,10 +1,12 @@
 'use client'
 import Image from 'next/image'
 import siteMetadata from '@/data/siteMetadata'
+import type { Dictionary } from '@/types/dictionary'
+import en from '../../dictionaries/en.json'
 
 const IOS_APP_URL = siteMetadata.appStoreUrl
 
-export default function Hero() {
+export default function Hero({ dict = en.hero }: { dict?: Dictionary['hero'] }) {
   return (
     <section className="relative overflow-hidden bg-[#0a0a0a]">
       {/* Subtle radial glow — top left */}
@@ -20,7 +22,7 @@ export default function Hero() {
             {/* Eyebrow */}
             <div className="animate-fade-in inline-flex items-center gap-2">
               <span className="h-px w-8 bg-white/20" />
-              <span className="eyebrow">Guided Training · Built for Men</span>
+              <span className="eyebrow">{dict.eyebrow}</span>
             </div>
 
             {/* Headline */}
@@ -28,11 +30,11 @@ export default function Hero() {
               className="animate-fade-in animation-delay-200 text-hero font-bold text-white"
               style={{ opacity: 0 }}
             >
-              Kegel Exercises
+              {dict.headlineLine1}
               <br />
-              <span className="text-white/40">For Men,</span>
+              <span className="text-white/40">{dict.headlineLine2}</span>
               <br />
-              Made Simple.
+              {dict.headlineLine3}
             </h1>
 
             {/* Body */}
@@ -40,8 +42,7 @@ export default function Hero() {
               className="animate-fade-in animation-delay-400 max-w-lg text-base leading-relaxed text-white/50 sm:text-lg"
               style={{ opacity: 0 }}
             >
-              Defy guides you through short daily Kegel sessions and helps you build a consistent
-              pelvic floor routine.
+              {dict.body}
             </p>
 
             {/* CTA */}
@@ -64,7 +65,7 @@ export default function Hero() {
                   >
                     <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
                   </svg>
-                  Download on iOS
+                  {dict.ctaIos}
                 </a>
                 <a
                   href={siteMetadata.googlePlayUrl}
@@ -80,18 +81,16 @@ export default function Hero() {
                   >
                     <path d="M4 3v18l17-9L4 3z" />
                   </svg>
-                  Get it on Google Play
+                  {dict.ctaAndroid}
                 </a>
                 <a
                   href="#features"
                   className="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-4 text-sm font-semibold text-white/70 transition-all duration-200 hover:border-white/40 hover:text-white"
                 >
-                  See how it works
+                  {dict.ctaHowItWorks}
                 </a>
               </div>
-              <span className="text-xs tracking-wide text-white/30">
-                Free to start · Private &amp; Discreet
-              </span>
+              <span className="text-xs tracking-wide text-white/30">{dict.note}</span>
             </div>
           </div>
 
@@ -100,7 +99,7 @@ export default function Hero() {
             <div className="relative mx-auto aspect-[4/5] w-full max-w-xl">
               <Image
                 src="/static/images/app_hero_dark.png"
-                alt="Defy app with guided Kegel exercises for men"
+                alt={dict.imageAlt}
                 fill
                 className="object-contain"
                 priority

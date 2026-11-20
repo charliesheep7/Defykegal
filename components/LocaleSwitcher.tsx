@@ -5,33 +5,26 @@ import { Menu, MenuButton, MenuItems, MenuItem, Transition } from '@headlessui/r
 import Link from 'next/link'
 import { Fragment } from 'react'
 import { usePathname } from 'next/navigation'
+import { getLocaleFromPath, localeInfo, locales as localeCodes, switchLocalePath } from 'lib/i18n'
+import { dictionaries } from 'lib/dictionaries'
 
-const locales = [
-  { code: 'en', label: 'English', flag: '🇺🇸' },
-  { code: 'ar', label: 'العربية', flag: '🇸🇦' },
-] as const
+const locales = localeCodes.map((code) => ({ code, ...localeInfo[code] }))
 
 export default function LocaleSwitcher() {
   const pathname = usePathname() || '/'
 
-  // Detect current language
-  const currentLang = pathname.startsWith('/ar') ? 'ar' : 'en'
+  const currentLang = getLocaleFromPath(pathname)
   const currentLocale = locales.find((l) => l.code === currentLang) || locales[0]
 
-  // Get path for each locale
-  const getLocalePath = (code: string) => {
-    if (code === 'en') {
-      return pathname.replace(/^\/ar/, '') || '/'
-    }
-    return `/${code}${pathname.replace(/^\/ar/, '')}`
-  }
+  // Same page in the other locale when it exists there, else that locale's home/blog
+  const getLocalePath = (code: (typeof locales)[number]['code']) => switchLocalePath(pathname, code)
 
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div className="flex items-center justify-center">
         <MenuButton
           className="flex items-center gap-2 rounded-md px-3 py-1.5 text-sm font-medium text-gray-900 transition-colors hover:bg-gray-100 dark:text-gray-100 dark:hover:bg-gray-800"
-          aria-label="Select language"
+          aria-label={dictionaries[currentLang].nav.selectLanguage}
         >
           <span className="text-lg">{currentLocale.flag}</span>
           <span className="hidden sm:inline">{currentLocale.label}</span>
@@ -70,6 +63,8 @@ export default function LocaleSwitcher() {
                 {({ focus }) => (
                   <Link
                     href={getLocalePath(locale.code)}
+                    hrefLang={locale.code}
+                    lang={locale.code}
                     className={`flex items-center gap-3 px-4 py-2.5 text-sm transition-colors ${
                       focus ? 'bg-gray-100 dark:bg-gray-700' : ''
                     } ${

@@ -2,6 +2,12 @@ import { MetadataRoute } from 'next'
 import { allBlogs } from 'contentlayer/generated'
 import { slug as githubSlug } from 'github-slugger'
 import siteMetadata from '@/data/siteMetadata'
+import {
+  INDEXED_LOCALIZED_ROUTES,
+  languageAlternates,
+  localizePath,
+  prefixedLocales,
+} from 'lib/i18n'
 
 // Static: the content is known at build time.
 export const dynamic = 'force-static'
@@ -12,6 +18,7 @@ export const dynamic = 'force-static'
  * trusts <lastmod> when it matches a change it can see on the page.
  */
 const STATIC_PAGES_UPDATED = '2026-09-06'
+const LOCALIZED_PAGES_UPDATED = '2026-11-20'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const siteUrl = siteMetadata.siteUrl
@@ -49,5 +56,26 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     lastModified: newestPost ?? STATIC_PAGES_UPDATED,
   }))
 
-  return [...routes, ...blogRoutes, ...tagRoutes]
+  // Localized routes (home only for now) with reciprocal hreflang alternates.
+  const absolute = (path: string) => (path === '/' ? siteUrl : `${siteUrl}${path}`)
+  const alternatesFor = (route: string) => ({
+    languages: Object.fromEntries(
+      Object.entries(languageAlternates(route)).map(([code, path]) => [code, absolute(path)])
+    ),
+  })
+  for (const route of routes) {
+    const path = route.url === siteUrl ? '/' : route.url.slice(siteUrl.length)
+    if ((INDEXED_LOCALIZED_ROUTES as readonly string[]).includes(path)) {
+      Object.assign(route, { alternates: alternatesFor(path) })
+    }
+  }
+  const localizedRoutes = INDEXED_LOCALIZED_ROUTES.flatMap((route) =>
+    prefixedLocales.map((lang) => ({
+      url: absolute(localizePath(route, lang)),
+      lastModified: LOCALIZED_PAGES_UPDATED,
+      alternates: alternatesFor(route),
+    }))
+  )
+
+  return [...routes, ...localizedRoutes, ...blogRoutes, ...tagRoutes]
 }

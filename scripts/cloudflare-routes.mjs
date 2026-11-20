@@ -1,7 +1,7 @@
 // Writes out/_headers and out/_redirects for Cloudflare from next.config's
 // headers() and redirects(), which `output: 'export'` does not apply.
 import { createRequire } from 'module'
-import { readdirSync, writeFileSync } from 'fs'
+import { existsSync, readdirSync, readFileSync, writeFileSync } from 'fs'
 import { join, relative } from 'path'
 
 const require = createRequire(import.meta.url)
@@ -49,3 +49,30 @@ writeFileSync('out/_redirects', redirectLines.join('\n') + '\n')
 console.log(
   `cloudflare-routes: ${headerRules.length} header rule(s), ${redirectRules.length} redirect(s)`
 )
+
+// The site has one root layout, so every exported page says <html lang="en">.
+// Give the localized pages (out/de.html, out/de/**.html, ...) their real lang.
+const htmlFiles = (dir) =>
+  readdirSync(dir, { withFileTypes: true }).flatMap((e) =>
+    e.isDirectory()
+      ? htmlFiles(join(dir, e.name))
+      : e.name.endsWith('.html')
+        ? [join(dir, e.name)]
+        : []
+  )
+let relabelled = 0
+for (const lang of ['de', 'fr', 'es', 'it']) {
+  const files = [
+    ...(existsSync(`out/${lang}.html`) ? [`out/${lang}.html`] : []),
+    ...(existsSync(`out/${lang}`) ? htmlFiles(`out/${lang}`) : []),
+  ]
+  for (const file of files) {
+    const html = readFileSync(file, 'utf8')
+    const next = html.replace(/<html lang="en"/, `<html lang="${lang}"`)
+    if (next !== html) {
+      writeFileSync(file, next)
+      relabelled++
+    }
+  }
+}
+console.log(`cloudflare-routes: set <html lang> on ${relabelled} localized page(s)`)
